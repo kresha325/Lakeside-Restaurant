@@ -1,0 +1,49 @@
+.menu-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1.25rem 2rem;
+  animation: menuFade 0.35s ease-out;
+}
+
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: #0f0f0f;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+  z-index: 100;
+  white-space: nowrap;
+  max-width: calc(100vw - 2rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

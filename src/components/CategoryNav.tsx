@@ -1,0 +1,68 @@
+import { useEffect, useRef, useState } from 'react'
+import { categories, type CategoryId } from '../data/menu'
+import './CategoryNav.css'
+
+export type FilterId = CategoryId | 'all'
+
+interface CategoryNavProps {
+  activeId: FilterId
+  onSelect: (id: FilterId) => void
+}
+
+export function CategoryNav({ activeId, onSelect }: CategoryNavProps) {
+  const [stuck, setStuck] = useState(false)
+  const sentinelRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = sentinelRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setStuck(!entry.isIntersecting),
+      { threshold: 0 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const btn = listRef.current?.querySelector<HTMLElement>(
+      `[data-cat="${activeId}"]`,
+    )
+    btn?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }, [activeId])
+
+  return (
+    <>
+      <div ref={sentinelRef} className="nav-sentinel" aria-hidden />
+      <nav className={`category-nav ${stuck ? 'is-stuck' : ''}`} aria-label="Menu categories">
+        <div className="category-nav__track" ref={listRef}>
+          <button
+            type="button"
+            data-cat="all"
+            className={`category-nav__item ${activeId === 'all' ? 'is-active' : ''}`}
+            onClick={() => onSelect('all')}
+            aria-current={activeId === 'all' ? 'true' : undefined}
+          >
+            Të gjitha
+          </button>
+          {categories.map((cat) => {
+            const active = cat.id === activeId
+            return (
+              <button
+                key={cat.id}
+                type="button"
+                data-cat={cat.id}
+                className={`category-nav__item ${active ? 'is-active' : ''}`}
+                onClick={() => onSelect(cat.id)}
+                aria-current={active ? 'true' : undefined}
+              >
+                {cat.navLabel ?? cat.label}
+              </button>
+            )
+          })}
+        </div>
+      </nav>
+    </>
+  )
+}

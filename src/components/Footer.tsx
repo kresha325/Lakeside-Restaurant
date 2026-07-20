@@ -1,0 +1,114 @@
+import { ChefHat } from './Icons'
+import { hotelInfo } from '../data/menu'
+import './Footer.css'
+
+export function Footer() {
+  const menuUrl =
+    typeof window !== 'undefined' ? window.location.origin : hotelInfo.websiteUrl
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(menuUrl)}`
+
+  return (
+    <footer className="footer">
+      <div className="footer__inner">
+        <div className="footer__panel footer__panel--fresh">
+          <ChefHat className="footer__chef" />
+          <h3 className="footer__panel-title">Fresh Ingredients</h3>
+          <p className="footer__panel-text">
+            We source the finest seasonal produce and local specialties to craft
+            every dish with care and authenticity.
+          </p>
+          <span className="footer__flourish" aria-hidden />
+        </div>
+
+        <div className="footer__qr">
+          <div className="footer__qr-card">
+            <div className="footer__qr-label">Skano për menu</div>
+            <img src={qrUrl} alt="QR code for digital menu" className="footer__qr-img" />
+            <div className="footer__qr-footer">Scan • Browse • Enjoy</div>
+          </div>
+        </div>
+
+        <div className="footer__panel footer__panel--contact">
+          <ul className="footer__contacts">
+            <li>
+              <span className="footer__icon" aria-hidden>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path
+                    d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  />
+                  <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                </svg>
+              </span>
+              {hotelInfo.location}
+            </li>
+            <li>
+              <span className="footer__icon" aria-hidden>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path
+                    d="M6.5 4.5h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A14 14 0 0 1 4.5 6.5a2 2 0 0 1 2-2z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <a href={`tel:${hotelInfo.phone.replace(/\s/g, '')}`}>{hotelInfo.phone}</a>
+            </li>
+            <li>
+              <span className="footer__icon" aria-hidden>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                  <path
+                    d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  />
+                </svg>
+              </span>
+              <a href={hotelInfo.websiteUrl} target="_blank" rel="noreferrer">
+                {hotelInfo.website}
+              </a>
+            </li>
+          </ul>
+          <div className="footer__social">
+            <a
+              href={hotelInfo.facebook}
+              className="footer__social-btn"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9z" />
+              </svg>
+            </a>
+            <a
+              href={hotelInfo.instagram}
+              className="footer__social-btn"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3.5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer__thanks">
+        <span className="footer__thanks-ornament" aria-hidden />
+        <p>Thank you for dining with us!</p>
+        <span className="footer__thanks-ornament" aria-hidden />
+      </div>
+    </footer>
+  )
+}

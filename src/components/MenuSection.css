@@ -1,0 +1,93 @@
+.menu-section {
+  padding: 2.5rem 0 0.5rem;
+  scroll-margin-top: 88px;
+}
+
+.menu-section__header {
+  margin-bottom: 0.5rem;
+}
+
+.menu-section__title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.menu-section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.45rem, 3.2vw, 1.95rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #141414;
+  margin: 0;
+}
+
+.menu-section__chef {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.menu-section__chef-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.menu-section__rule {
+  display: flex;
+  align-items: center;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), rgba(197, 160, 89, 0.12));
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.menu-section__diamond {
+  position: absolute;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--gold);
+  background: var(--cream);
+  transform: rotate(45deg);
+  margin-left: -1px;
+}
+
+.menu-section__featured {
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 1rem auto 1.5rem;
+  width: min(100%, 520px);
+  aspect-ratio: 1 / 1;
+  max-height: none;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.menu-section__featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menu-section__list {
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.35rem 1rem 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 800px) {
+  .menu-section__list {
+    padding: 0.5rem 1.5rem 0.65rem;
+  }
+}
