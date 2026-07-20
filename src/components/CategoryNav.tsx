@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { useLocale } from '../i18n/LocaleContext'
 import { categories, type CategoryId } from '../data/menu'
+import { LangSwitch } from './LangSwitch'
 import './CategoryNav.css'
 
 export type FilterId = CategoryId | 'all'
@@ -10,6 +12,7 @@ interface CategoryNavProps {
 }
 
 export function CategoryNav({ activeId, onSelect }: CategoryNavProps) {
+  const { t, ui } = useLocale()
   const [stuck, setStuck] = useState(false)
   const sentinelRef = useRef<HTMLDivElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
@@ -35,32 +38,35 @@ export function CategoryNav({ activeId, onSelect }: CategoryNavProps) {
   return (
     <>
       <div ref={sentinelRef} className="nav-sentinel" aria-hidden />
-      <nav className={`category-nav ${stuck ? 'is-stuck' : ''}`} aria-label="Menu categories">
-        <div className="category-nav__track" ref={listRef}>
-          <button
-            type="button"
-            data-cat="all"
-            className={`category-nav__item ${activeId === 'all' ? 'is-active' : ''}`}
-            onClick={() => onSelect('all')}
-            aria-current={activeId === 'all' ? 'true' : undefined}
-          >
-            Të gjitha
-          </button>
-          {categories.map((cat) => {
-            const active = cat.id === activeId
-            return (
-              <button
-                key={cat.id}
-                type="button"
-                data-cat={cat.id}
-                className={`category-nav__item ${active ? 'is-active' : ''}`}
-                onClick={() => onSelect(cat.id)}
-                aria-current={active ? 'true' : undefined}
-              >
-                {cat.navLabel ?? cat.label}
-              </button>
-            )
-          })}
+      <nav className={`category-nav ${stuck ? 'is-stuck' : ''}`} aria-label={t(ui.categories)}>
+        <div className="category-nav__bar">
+          <div className="category-nav__track" ref={listRef}>
+            <button
+              type="button"
+              data-cat="all"
+              className={`category-nav__item ${activeId === 'all' ? 'is-active' : ''}`}
+              onClick={() => onSelect('all')}
+              aria-current={activeId === 'all' ? 'true' : undefined}
+            >
+              {t(ui.all)}
+            </button>
+            {categories.map((cat) => {
+              const active = cat.id === activeId
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  data-cat={cat.id}
+                  className={`category-nav__item ${active ? 'is-active' : ''}`}
+                  onClick={() => onSelect(cat.id)}
+                  aria-current={active ? 'true' : undefined}
+                >
+                  {t(cat.navLabel ?? cat.label)}
+                </button>
+              )
+            })}
+          </div>
+          <LangSwitch />
         </div>
       </nav>
     </>

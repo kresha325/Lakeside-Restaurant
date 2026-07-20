@@ -1,4 +1,6 @@
 import type { Category, MenuItem } from '../data/menu'
+import { assetUrl } from '../data/menu'
+import { useLocale } from '../i18n/LocaleContext'
 import { ChefHat } from './Icons'
 import { MenuCard } from './MenuCard'
 import './MenuSection.css'
@@ -9,6 +11,9 @@ interface MenuSectionProps {
 }
 
 export function MenuSection({ category, onAdd }: MenuSectionProps) {
+  const { t, ui } = useLocale()
+  const label = t(category.label)
+
   return (
     <section
       id={category.id}
@@ -18,12 +23,12 @@ export function MenuSection({ category, onAdd }: MenuSectionProps) {
       <div className="menu-section__header">
         <div className="menu-section__title-row">
           <h2 id={`${category.id}-title`} className="menu-section__title">
-            {category.label}
+            {label}
           </h2>
           {category.chefsChoice && (
             <span className="menu-section__chef">
               <ChefHat className="menu-section__chef-icon" />
-              Chef’s Choice
+              {t(ui.chefsChoice)}
             </span>
           )}
         </div>
@@ -35,8 +40,8 @@ export function MenuSection({ category, onAdd }: MenuSectionProps) {
       {category.featuredImage && (
         <div className="menu-section__featured">
           <img
-            src={category.featuredImage}
-            alt={category.label}
+            src={assetUrl(category.featuredImage)}
+            alt={label}
             loading="lazy"
           />
         </div>

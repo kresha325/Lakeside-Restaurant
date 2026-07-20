@@ -1,28 +1,37 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { DiamondLogo, Stars } from './Icons'
-import { bestsellers, hotelInfo } from '../data/menu'
+import { assetUrl, bestsellers, hotelInfo } from '../data/menu'
+import { useLocale } from '../i18n/LocaleContext'
 import './Hero.css'
 
 const SLIDE_MS = 1500
 
-const slides = [
-  { src: '/images/hero.jpg', alt: 'Lakeside Hotel', position: 'center 55%' },
-  ...bestsellers.map((item) => ({
-    src: item.image,
-    alt: item.name,
-    position: 'center',
-  })),
-]
-
 export function Hero() {
+  const { t, ui } = useLocale()
   const [active, setActive] = useState(0)
+
+  const slides = useMemo(
+    () => [
+      {
+        src: assetUrl('/images/hero.jpg'),
+        alt: hotelInfo.name,
+        position: 'center 55%',
+      },
+      ...bestsellers.map((item) => ({
+        src: assetUrl(item.image),
+        alt: t(item.name),
+        position: 'center',
+      })),
+    ],
+    [t],
+  )
 
   useEffect(() => {
     const id = window.setInterval(() => {
       setActive((i) => (i + 1) % slides.length)
     }, SLIDE_MS)
     return () => window.clearInterval(id)
-  }, [])
+  }, [slides.length])
 
   return (
     <header className="hero">
@@ -49,14 +58,14 @@ export function Hero() {
         </div>
 
         <div className="hero__title-block">
-          <p className="hero__restaurant">Restaurant</p>
-          <h2 className="hero__menu">Menu</h2>
+          <p className="hero__restaurant">{t(ui.restaurant)}</p>
+          <h2 className="hero__menu">{t(ui.menu)}</h2>
           <p className="hero__tagline">{hotelInfo.tagline}</p>
           <span className="hero__flourish" aria-hidden />
         </div>
       </div>
 
-      <div className="hero__dots" role="tablist" aria-label="Hero slides">
+      <div className="hero__dots" role="tablist" aria-label={t(ui.heroSlides)}>
         {slides.map((slide, i) => (
           <button
             key={slide.src}

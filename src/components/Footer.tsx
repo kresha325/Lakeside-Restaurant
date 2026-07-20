@@ -1,10 +1,12 @@
 import { ChefHat } from './Icons'
 import { hotelInfo } from '../data/menu'
+import { useLocale } from '../i18n/LocaleContext'
 import './Footer.css'
 
 export function Footer() {
+  const { t, ui } = useLocale()
   const menuUrl =
-    typeof window !== 'undefined' ? window.location.origin : hotelInfo.websiteUrl
+    typeof window !== 'undefined' ? window.location.href : hotelInfo.websiteUrl
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(menuUrl)}`
 
   return (
@@ -12,19 +14,16 @@ export function Footer() {
       <div className="footer__inner">
         <div className="footer__panel footer__panel--fresh">
           <ChefHat className="footer__chef" />
-          <h3 className="footer__panel-title">Fresh Ingredients</h3>
-          <p className="footer__panel-text">
-            We source the finest seasonal produce and local specialties to craft
-            every dish with care and authenticity.
-          </p>
+          <h3 className="footer__panel-title">{t(ui.freshTitle)}</h3>
+          <p className="footer__panel-text">{t(ui.freshText)}</p>
           <span className="footer__flourish" aria-hidden />
         </div>
 
         <div className="footer__qr">
           <div className="footer__qr-card">
-            <div className="footer__qr-label">Skano për menu</div>
-            <img src={qrUrl} alt="QR code for digital menu" className="footer__qr-img" />
-            <div className="footer__qr-footer">Scan • Browse • Enjoy</div>
+            <div className="footer__qr-label">{t(ui.scanMenu)}</div>
+            <img src={qrUrl} alt="QR" className="footer__qr-img" />
+            <div className="footer__qr-footer">{t(ui.scanBrowse)}</div>
           </div>
         </div>
 
@@ -106,7 +105,7 @@ export function Footer() {
 
       <div className="footer__thanks">
         <span className="footer__thanks-ornament" aria-hidden />
-        <p>Thank you for dining with us!</p>
+        <p>{t(ui.thanks)}</p>
         <span className="footer__thanks-ornament" aria-hidden />
       </div>
     </footer>

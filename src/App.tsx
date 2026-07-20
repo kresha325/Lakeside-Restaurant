@@ -4,9 +4,11 @@ import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { MenuSection } from './components/MenuSection'
 import { categories, type MenuItem } from './data/menu'
+import { LocaleProvider, useLocale } from './i18n/LocaleContext'
 import './App.css'
 
-export default function App() {
+function AppContent() {
+  const { t, ui } = useLocale()
   const [filter, setFilter] = useState<FilterId>('all')
   const [toast, setToast] = useState<string | null>(null)
 
@@ -16,7 +18,7 @@ export default function App() {
   }, [filter])
 
   const handleAdd = (item: MenuItem) => {
-    setToast(`${item.name} — noted`)
+    setToast(`${t(item.name)} — ${t(ui.noted)}`)
     window.setTimeout(() => setToast(null), 1800)
   }
 
@@ -37,5 +39,13 @@ export default function App() {
         {toast}
       </div>
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <LocaleProvider>
+      <AppContent />
+    </LocaleProvider>
   )
 }

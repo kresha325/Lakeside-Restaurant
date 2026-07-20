@@ -142,17 +142,17 @@ export function CategoryIcon({ name, active, className }: CategoryIconProps) {
   }
 }
 
-/** Lakeside mark — pointed top, sharp sides, shallow rounded base */
+/** Lakeside mark — pointed top, sharp sides, rounded base */
 export function DiamondLogo({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 56 36"
+      viewBox="0 0 56 38"
       className={className}
       aria-hidden
       fill="none"
     >
       <path
-        d="M28 4.4 L44.5 21.5 A20 7.2 0 0 1 11.5 21.5 Z"
+        d="M28 4.4 L44.5 21.5 A18.5 11.5 0 0 1 11.5 21.5 Z"
         stroke="currentColor"
         strokeWidth="3.5"
         strokeLinejoin="miter"
