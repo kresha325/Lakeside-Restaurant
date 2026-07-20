@@ -17,28 +17,15 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
-.category-nav__bar {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.55rem 1rem 0.55rem 0.5rem;
-}
-
 .category-nav__track {
   display: flex;
   gap: 0.4rem;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 0.2rem 0.5rem;
-  flex: 1;
-  min-width: 0;
-}
-
-.category-nav__track::-webkit-scrollbar {
-  display: none;
+  padding: 0.75rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .category-nav__track::-webkit-scrollbar {

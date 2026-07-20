@@ -146,13 +146,13 @@ export function CategoryIcon({ name, active, className }: CategoryIconProps) {
 export function DiamondLogo({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 56 38"
+      viewBox="0 0 56 40"
       className={className}
       aria-hidden
       fill="none"
     >
       <path
-        d="M28 4.4 L44.5 21.5 A18.5 11.5 0 0 1 11.5 21.5 Z"
+        d="M28 4.4 L44.5 21.5 A17.5 14 0 0 1 11.5 21.5 Z"
         stroke="currentColor"
         strokeWidth="3.5"
         strokeLinejoin="miter"

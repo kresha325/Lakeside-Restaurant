@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { DiamondLogo, Stars } from './Icons'
 import { assetUrl, bestsellers, hotelInfo } from '../data/menu'
 import { useLocale } from '../i18n/LocaleContext'
+import { LangSwitch } from './LangSwitch'
 import './Hero.css'
 
 const SLIDE_MS = 1500
@@ -47,6 +48,10 @@ export function Hero() {
           />
         ))}
         <div className="hero__overlay" />
+      </div>
+
+      <div className="hero__lang">
+        <LangSwitch />
       </div>
 
       <div className="hero__content">

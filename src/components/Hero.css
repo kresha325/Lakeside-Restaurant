@@ -43,6 +43,32 @@
     linear-gradient(90deg, rgba(10, 10, 10, 0.45) 0%, transparent 50%, rgba(10, 10, 10, 0.35) 100%);
 }
 
+.hero__lang {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+}
+
+.hero__lang .lang-switch {
+  background: rgba(15, 15, 15, 0.45);
+  border-color: rgba(197, 160, 89, 0.45);
+  backdrop-filter: blur(8px);
+}
+
+.hero__lang .lang-switch__btn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__lang .lang-switch__btn:hover:not(.is-active) {
+  color: #fff;
+}
+
+.hero__lang .lang-switch__btn.is-active {
+  background: var(--gold);
+  color: #fff;
+}
+
 .hero__content {
   position: relative;
   z-index: 2;
