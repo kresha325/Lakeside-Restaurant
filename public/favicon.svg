@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <rect width="32" height="32" rx="4" fill="#0F0F0F"/>
-  <g transform="translate(16 15.5) scale(0.48) translate(-28 -18.5)">
+  <g transform="translate(16 15.5) scale(0.5) translate(-28 -17)">
     <path
-      d="M28 4.4 L44.5 21.5 A17.53 17.53 0 1 1 11.5 21.5 Z"
+      d="M28 4.4 L44.5 21.5 A20 7.2 0 0 1 11.5 21.5 Z"
       stroke="#C5A059"
       stroke-width="3.5"
       stroke-linejoin="miter"
