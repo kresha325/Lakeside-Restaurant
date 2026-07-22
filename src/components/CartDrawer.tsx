@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { hotelInfo } from '../data/menu'
 import { useCart } from '../cart/CartContext'
 import { useLocale } from '../i18n/LocaleContext'
-import { tx, type Locale } from '../i18n/strings'
+import { tx, ui, type Locale } from '../i18n/strings'
 import './CartDrawer.css'
 
 export type PaymentMethod = 'pos' | 'cash'
@@ -22,10 +22,11 @@ function buildWhatsAppMessage(opts: {
   cashAmount?: number
 }): string {
   const { locale, roomNumber, lines, total, payment, cashAmount } = opts
-  const isSq = locale === 'sq'
+  const s = (value: { sq: string; en: string }) => tx(value, locale)
+
   const header = roomNumber
-    ? `*${isSq ? 'Porosi nga dhoma' : 'Order from room'} ${roomNumber}*`
-    : `*${isSq ? 'Porosi' : 'Order'}*`
+    ? `*${s(ui.orderFromRoom)} ${roomNumber}*`
+    : `*${s(ui.order)}*`
 
   const items = lines
     .map((l) => `• ${l.qty}x ${l.name} — €${(l.price * l.qty).toFixed(2)}`)
@@ -33,16 +34,16 @@ function buildWhatsAppMessage(opts: {
 
   const paymentLine =
     payment === 'pos'
-      ? `${isSq ? 'Pagesa' : 'Payment'}: POS`
-      : `${isSq ? 'Pagesa' : 'Payment'}: ${isSq ? 'Kesh' : 'Cash'} (€${cashAmount})`
+      ? `${s(ui.paymentLabel)}: POS`
+      : `${s(ui.paymentLabel)}: ${s(ui.paymentCash)} (€${cashAmount})`
 
   return [
     header,
     '',
-    `*${isSq ? 'Porosia' : 'Order'}*`,
+    `*${s(ui.orderHeader)}*`,
     items,
     '',
-    `*${isSq ? 'Totali' : 'Total'}: €${total.toFixed(2)}*`,
+    `*${s(ui.cartTotal)}: €${total.toFixed(2)}*`,
     paymentLine,
   ].join('\n')
 }
@@ -150,11 +151,19 @@ export function CartDrawer({ roomNumber }: CartDrawerProps) {
                   </div>
                   <div className="cart-drawer__line-actions">
                     <div className="cart-drawer__qty">
-                      <button type="button" onClick={() => setQty(l.id, l.qty - 1)}>
+                      <button
+                        type="button"
+                        aria-label={t(ui.qtyDecrease)}
+                        onClick={() => setQty(l.id, l.qty - 1)}
+                      >
                         −
                       </button>
                       <span>{l.qty}</span>
-                      <button type="button" onClick={() => setQty(l.id, l.qty + 1)}>
+                      <button
+                        type="button"
+                        aria-label={t(ui.qtyIncrease)}
+                        onClick={() => setQty(l.id, l.qty + 1)}
+                      >
                         +
                       </button>
                     </div>

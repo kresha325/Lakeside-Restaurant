@@ -78,7 +78,7 @@ export function Footer() {
             <a
               href={hotelInfo.mapsUrl}
               className="footer__social-btn"
-              aria-label="Location"
+              aria-label={t(ui.location)}
               target="_blank"
               rel="noreferrer"
             >

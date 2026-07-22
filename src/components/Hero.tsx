@@ -65,7 +65,7 @@ export function Hero({ kind }: HeroProps) {
         <LangSwitch />
       </div>
 
-      <nav className="hero__menus" aria-label="Menus">
+      <nav className="hero__menus" aria-label={t(ui.menusNav)}>
         <Link
           to="/"
           className={`hero__menu-link ${!isRoom ? 'is-active' : ''}`}

@@ -1,11 +1,20 @@
 .room-onboard {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:
+    max(1rem, env(safe-area-inset-top))
+    max(1rem, env(safe-area-inset-right))
+    max(1rem, env(safe-area-inset-bottom))
+    max(1rem, env(safe-area-inset-left));
+  padding-top: max(3.5rem, calc(env(safe-area-inset-top) + 3rem));
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--cream);
+  -webkit-overflow-scrolling: touch;
 }
 
 .room-onboard__bg {
@@ -14,12 +23,13 @@
   background:
     radial-gradient(ellipse 80% 50% at 50% -10%, rgba(197, 160, 89, 0.22), transparent 60%),
     linear-gradient(165deg, #f9f6f0 0%, #efe8dc 45%, #e8dfd0 100%);
+  pointer-events: none;
 }
 
 .room-onboard__lang {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
   z-index: 2;
 }
 
@@ -27,9 +37,11 @@
   position: relative;
   z-index: 1;
   width: min(100%, 420px);
+  max-width: 100%;
   background: #fff;
   border-radius: 18px;
-  padding: 2.25rem 1.75rem 2rem;
+  padding: clamp(1.35rem, 4.5vw, 2.25rem) clamp(1.1rem, 4vw, 1.75rem)
+    clamp(1.25rem, 4vw, 2rem);
   text-align: center;
   box-shadow: 0 16px 48px rgba(15, 15, 15, 0.1);
   border: 1px solid rgba(197, 160, 89, 0.2);
@@ -37,37 +49,42 @@
 }
 
 .room-onboard__logo {
-  width: 48px;
-  height: 48px;
+  width: clamp(40px, 10vw, 48px);
+  height: clamp(40px, 10vw, 48px);
   color: var(--gold);
-  margin: 0 auto 0.85rem;
+  margin: 0 auto 0.75rem;
 }
 
 .room-onboard__hotel {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: clamp(0.6rem, 2.4vw, 0.68rem);
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.65rem;
+  word-break: break-word;
 }
 
 .room-onboard__title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 5vw, 2.25rem);
+  font-size: clamp(1.55rem, 6.5vw, 2.25rem);
   font-weight: 700;
   letter-spacing: 0.04em;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.45rem;
   color: #141414;
+  line-height: 1.15;
 }
 
 .room-onboard__subtitle {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: clamp(0.82rem, 3.2vw, 0.9rem);
   line-height: 1.55;
   color: #6b6b6b;
-  margin: 0 0 1.75rem;
+  margin: 0 0 clamp(1.15rem, 4vw, 1.75rem);
+  max-width: 34ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .room-onboard__form {
@@ -76,29 +93,34 @@
   align-items: stretch;
   gap: 0.55rem;
   text-align: left;
+  width: 100%;
 }
 
 .room-onboard__label {
   font-family: var(--font-sans);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #333;
 }
 
 .room-onboard__input {
   font-family: var(--font-sans);
-  font-size: 1.35rem;
+  font-size: 1.125rem; /* ≥16px — avoid iOS zoom */
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-align: center;
-  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.85rem 0.9rem;
   border-radius: 10px;
   border: 1.5px solid rgba(197, 160, 89, 0.4);
   background: var(--cream);
   color: #141414;
   outline: none;
+  appearance: none;
+  -webkit-appearance: none;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -116,24 +138,28 @@
 .room-onboard__error {
   font-family: var(--font-sans);
   font-size: 0.78rem;
+  line-height: 1.4;
   color: #b84a3a;
   margin: 0;
   text-align: center;
 }
 
 .room-onboard__submit {
-  margin-top: 0.65rem;
+  margin-top: 0.55rem;
   border: none;
   border-radius: 10px;
-  padding: 0.95rem 1.25rem;
+  padding: 0.9rem 1rem;
+  min-height: 48px;
   background: var(--gold);
   color: #fff;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: clamp(0.7rem, 2.8vw, 0.78rem);
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
+  width: 100%;
+  line-height: 1.3;
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -145,6 +171,77 @@
 
 .room-onboard__submit:active {
   transform: scale(0.98);
+}
+
+@media (min-width: 480px) {
+  .room-onboard__input {
+    font-size: 1.35rem;
+    letter-spacing: 0.12em;
+    padding: 0.9rem 1rem;
+  }
+
+  .room-onboard__submit {
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Short / landscape phones: keep card usable without clipping */
+@media (max-height: 560px) {
+  .room-onboard {
+    align-items: flex-start;
+    padding-top: max(3.25rem, calc(env(safe-area-inset-top) + 2.75rem));
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  }
+
+  .room-onboard__card {
+    border-radius: 14px;
+    padding: 1.15rem 1.1rem 1.2rem;
+  }
+
+  .room-onboard__logo {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.45rem;
+  }
+
+  .room-onboard__hotel {
+    margin-bottom: 0.35rem;
+  }
+
+  .room-onboard__title {
+    font-size: 1.45rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .room-onboard__subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .room-onboard__input {
+    padding: 0.7rem 0.85rem;
+    font-size: 1.1rem;
+  }
+
+  .room-onboard__submit {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .room-onboard {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .room-onboard__hotel {
+    letter-spacing: 0.14em;
+  }
+
+  .room-onboard__submit {
+    letter-spacing: 0.06em;
+  }
 }
 
 @keyframes onboardIn {

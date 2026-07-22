@@ -2,17 +2,17 @@ import { useLocale } from '../i18n/LocaleContext'
 import './LangSwitch.css'
 
 export function LangSwitch() {
-  const { locale, setLocale } = useLocale()
+  const { locale, setLocale, t, ui } = useLocale()
 
   return (
-    <div className="lang-switch" role="group" aria-label="Language">
+    <div className="lang-switch" role="group" aria-label={t(ui.language)}>
       <button
         type="button"
         className={`lang-switch__btn ${locale === 'sq' ? 'is-active' : ''}`}
         onClick={() => setLocale('sq')}
         aria-pressed={locale === 'sq'}
       >
-        SQ
+        {t(ui.langSq)}
       </button>
       <button
         type="button"
@@ -20,7 +20,7 @@ export function LangSwitch() {
         onClick={() => setLocale('en')}
         aria-pressed={locale === 'en'}
       >
-        EN
+        {t(ui.langEn)}
       </button>
     </div>
   )
