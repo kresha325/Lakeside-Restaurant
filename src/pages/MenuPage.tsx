@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useCart } from '../cart/CartContext'
 import { CartDrawer } from '../components/CartDrawer'
 import { CartFab } from '../components/CartFab'
@@ -23,12 +23,18 @@ interface MenuPageProps {
 
 export function MenuPage({ kind, categories }: MenuPageProps) {
   const { t, ui } = useLocale()
-  const { addItem } = useCart()
+  const { addItem, clear, setOpen } = useCart()
   const [filter, setFilter] = useState('all')
   const [toast, setToast] = useState<string | null>(null)
   const [roomNumber, setRoomNumber] = useState<string | null>(() =>
     kind === 'room' ? getStoredRoomNumber() : null,
   )
+
+  useEffect(() => {
+    clear()
+    setOpen(false)
+    setFilter('all')
+  }, [kind, clear, setOpen])
 
   const visibleCategories = useMemo(() => {
     if (filter === 'all') return categories
@@ -98,7 +104,7 @@ export function MenuPage({ kind, categories }: MenuPageProps) {
       <Footer />
 
       <CartFab />
-      <CartDrawer roomNumber={kind === 'room' ? roomNumber : null} />
+      <CartDrawer kind={kind} roomNumber={kind === 'room' ? roomNumber : null} />
 
       <div className={`toast ${toast ? 'is-visible' : ''}`} role="status" aria-live="polite">
         {toast}

@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { DiamondLogo, Stars } from './Icons'
 import { assetUrl, bestsellers, hotelInfo } from '../data/menu'
 import { useLocale } from '../i18n/LocaleContext'
@@ -65,20 +64,11 @@ export function Hero({ kind }: HeroProps) {
         <LangSwitch />
       </div>
 
-      <nav className="hero__menus" aria-label={t(ui.menusNav)}>
-        <Link
-          to="/"
-          className={`hero__menu-link ${!isRoom ? 'is-active' : ''}`}
-        >
-          {t(ui.restaurantMenu)}
-        </Link>
-        <Link
-          to="/room"
-          className={`hero__menu-link ${isRoom ? 'is-active' : ''}`}
-        >
-          {t(ui.roomService)}
-        </Link>
-      </nav>
+      <p className="hero__menus">
+        <span className="hero__menu-badge">
+          {isRoom ? t(ui.roomService) : t(ui.restaurantMenu)}
+        </span>
+      </p>
 
       <div className="hero__content">
         <div className="hero__brand">
