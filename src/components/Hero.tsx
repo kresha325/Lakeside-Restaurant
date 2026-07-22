@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { DiamondLogo, Stars } from './Icons'
 import { assetUrl, bestsellers, hotelInfo } from '../data/menu'
 import { useLocale } from '../i18n/LocaleContext'
@@ -7,9 +8,16 @@ import './Hero.css'
 
 const SLIDE_MS = 1500
 
-export function Hero() {
+export type MenuKind = 'restaurant' | 'room'
+
+interface HeroProps {
+  kind: MenuKind
+}
+
+export function Hero({ kind }: HeroProps) {
   const { t, ui } = useLocale()
   const [active, setActive] = useState(0)
+  const isRoom = kind === 'room'
 
   const slides = useMemo(
     () => [
@@ -18,16 +26,19 @@ export function Hero() {
         alt: hotelInfo.name,
         position: 'center 55%',
       },
-      ...bestsellers.map((item) => ({
-        src: assetUrl(item.image),
-        alt: t(item.name),
-        position: 'center',
-      })),
+      ...(isRoom
+        ? []
+        : bestsellers.map((item) => ({
+            src: assetUrl(item.image),
+            alt: t(item.name),
+            position: 'center',
+          }))),
     ],
-    [t],
+    [t, isRoom],
   )
 
   useEffect(() => {
+    if (slides.length <= 1) return
     const id = window.setInterval(() => {
       setActive((i) => (i + 1) % slides.length)
     }, SLIDE_MS)
@@ -54,6 +65,21 @@ export function Hero() {
         <LangSwitch />
       </div>
 
+      <nav className="hero__menus" aria-label="Menus">
+        <Link
+          to="/"
+          className={`hero__menu-link ${!isRoom ? 'is-active' : ''}`}
+        >
+          {t(ui.restaurantMenu)}
+        </Link>
+        <Link
+          to="/room"
+          className={`hero__menu-link ${isRoom ? 'is-active' : ''}`}
+        >
+          {t(ui.roomService)}
+        </Link>
+      </nav>
+
       <div className="hero__content">
         <div className="hero__brand">
           <DiamondLogo className="hero__logo" />
@@ -63,26 +89,32 @@ export function Hero() {
         </div>
 
         <div className="hero__title-block">
-          <p className="hero__restaurant">{t(ui.restaurant)}</p>
+          <p className="hero__restaurant">
+            {isRoom ? t(ui.roomService) : t(ui.restaurant)}
+          </p>
           <h2 className="hero__menu">{t(ui.menu)}</h2>
-          <p className="hero__tagline">{hotelInfo.tagline}</p>
+          <p className="hero__tagline">
+            {isRoom ? t(ui.roomTagline) : hotelInfo.tagline}
+          </p>
           <span className="hero__flourish" aria-hidden />
         </div>
       </div>
 
-      <div className="hero__dots" role="tablist" aria-label={t(ui.heroSlides)}>
-        {slides.map((slide, i) => (
-          <button
-            key={slide.src}
-            type="button"
-            role="tab"
-            aria-selected={i === active}
-            aria-label={slide.alt}
-            className={`hero__dot ${i === active ? 'is-active' : ''}`}
-            onClick={() => setActive(i)}
-          />
-        ))}
-      </div>
+      {slides.length > 1 && (
+        <div className="hero__dots" role="tablist" aria-label={t(ui.heroSlides)}>
+          {slides.map((slide, i) => (
+            <button
+              key={slide.src}
+              type="button"
+              role="tab"
+              aria-selected={i === active}
+              aria-label={slide.alt}
+              className={`hero__dot ${i === active ? 'is-active' : ''}`}
+              onClick={() => setActive(i)}
+            />
+          ))}
+        </div>
+      )}
     </header>
   )
 }

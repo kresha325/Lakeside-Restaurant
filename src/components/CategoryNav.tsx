@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocale } from '../i18n/LocaleContext'
-import { categories, type CategoryId } from '../data/menu'
+import type { Category } from '../data/menu'
 import './CategoryNav.css'
 
-export type FilterId = CategoryId | 'all'
+export type FilterId = string
 
 interface CategoryNavProps {
+  categories: Category[]
   activeId: FilterId
   onSelect: (id: FilterId) => void
 }
 
-export function CategoryNav({ activeId, onSelect }: CategoryNavProps) {
+export function CategoryNav({ categories, activeId, onSelect }: CategoryNavProps) {
   const { t, ui } = useLocale()
   const [stuck, setStuck] = useState(false)
   const sentinelRef = useRef<HTMLDivElement>(null)

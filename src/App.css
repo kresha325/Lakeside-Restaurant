@@ -5,6 +5,55 @@
   animation: menuFade 0.35s ease-out;
 }
 
+.menu-empty {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: #6b6b6b;
+  padding: 3rem 1rem;
+  margin: 1.5rem 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.room-badge-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 0.65rem 1rem;
+  background: #0f0f0f;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.room-badge-bar strong {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.room-badge-bar__change {
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  background: transparent;
+  color: var(--gold);
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.room-badge-bar__change:hover {
+  background: rgba(197, 160, 89, 0.12);
+}
+
 @keyframes menuFade {
   from {
     opacity: 0;

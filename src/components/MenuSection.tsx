@@ -32,6 +32,9 @@ export function MenuSection({ category, onAdd }: MenuSectionProps) {
             </span>
           )}
         </div>
+        {category.note && (
+          <p className="menu-section__note">{t(category.note)}</p>
+        )}
         <div className="menu-section__rule" aria-hidden>
           <span className="menu-section__diamond" />
         </div>

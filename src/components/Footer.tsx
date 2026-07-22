@@ -76,6 +76,21 @@ export function Footer() {
           </ul>
           <div className="footer__social">
             <a
+              href={hotelInfo.mapsUrl}
+              className="footer__social-btn"
+              aria-label="Location"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <path
+                  d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"
+                  strokeLinejoin="round"
+                />
+                <circle cx="12" cy="10" r="2.2" />
+              </svg>
+            </a>
+            <a
               href={hotelInfo.facebook}
               className="footer__social-btn"
               aria-label="Facebook"
@@ -97,6 +112,17 @@ export function Footer() {
                 <rect x="4" y="4" width="16" height="16" rx="4" />
                 <circle cx="12" cy="12" r="3.5" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
+              href={hotelInfo.tiktok}
+              className="footer__social-btn"
+              aria-label="TikTok"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden>
+                <path d="M16.5 3c.4 2.2 1.8 3.8 4 4.3v2.4c-1.4-.1-2.7-.5-3.8-1.3v6.6c0 3.4-2.7 6-6.1 6S4.5 18.4 4.5 15s2.7-6 6.1-6c.3 0 .6 0 .9.1v2.5c-.3-.1-.6-.1-.9-.1-1.9 0-3.5 1.6-3.5 3.5S8.7 18.5 10.6 18.5s3.5-1.6 3.5-3.5V3h2.4z" />
               </svg>
             </a>
           </div>

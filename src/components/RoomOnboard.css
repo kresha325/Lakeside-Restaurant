@@ -1,0 +1,159 @@
+.room-onboard {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.room-onboard__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(197, 160, 89, 0.22), transparent 60%),
+    linear-gradient(165deg, #f9f6f0 0%, #efe8dc 45%, #e8dfd0 100%);
+}
+
+.room-onboard__lang {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.room-onboard__card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.25rem 1.75rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 48px rgba(15, 15, 15, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  animation: onboardIn 0.55s ease-out both;
+}
+
+.room-onboard__logo {
+  width: 48px;
+  height: 48px;
+  color: var(--gold);
+  margin: 0 auto 0.85rem;
+}
+
+.room-onboard__hotel {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.75rem;
+}
+
+.room-onboard__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem;
+  color: #141414;
+}
+
+.room-onboard__subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #6b6b6b;
+  margin: 0 0 1.75rem;
+}
+
+.room-onboard__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.55rem;
+  text-align: left;
+}
+
+.room-onboard__label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.room-onboard__input {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(197, 160, 89, 0.4);
+  background: var(--cream);
+  color: #141414;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.room-onboard__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+}
+
+.room-onboard__input.is-invalid {
+  border-color: #b84a3a;
+}
+
+.room-onboard__error {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #b84a3a;
+  margin: 0;
+  text-align: center;
+}
+
+.room-onboard__submit {
+  margin-top: 0.65rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.95rem 1.25rem;
+  background: var(--gold);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.room-onboard__submit:hover {
+  background: var(--gold-dark);
+}
+
+.room-onboard__submit:active {
+  transform: scale(0.98);
+}
+
+@keyframes onboardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

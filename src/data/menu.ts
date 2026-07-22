@@ -29,9 +29,10 @@ export interface MenuItem {
 }
 
 export interface Category {
-  id: CategoryId
+  id: string
   label: LString
   navLabel?: LString
+  note?: LString
   icon: string
   chefsChoice?: boolean
   featuredImage?: string
@@ -292,12 +293,15 @@ export const hotelInfo = {
   name: 'Lakeside Hotel',
   subtitle: 'Spa & Conference',
   tagline: 'Taste. Relax. Enjoy.',
-  location: 'Vërnicë, Prizren',
+  location: 'Vërmicë, Prizren',
   phone: '+383 48 808 408',
   website: 'lakesideks.com',
   websiteUrl: 'https://lakesideks.com',
-  facebook: 'https://facebook.com',
-  instagram: 'https://instagram.com',
+  facebook: 'https://www.facebook.com/Lakesidehotel2022',
+  instagram: 'https://www.instagram.com/lakesideks/',
+  tiktok: 'https://www.tiktok.com/@lakesideks',
+  mapsUrl:
+    'https://www.google.com/maps?q=Lakeside+Hotel/@42.16407887121178,20.562387275533684,17z&ll=42.16407887121178,20.562387275533684',
 }
 
 export interface BestSeller {
