@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useCart } from '../cart/CartContext'
 import { CartDrawer } from '../components/CartDrawer'
 import { CartFab } from '../components/CartFab'
+import { Footer } from '../components/Footer'
 import { DiamondLogo, Stars } from '../components/Icons'
 import { LangSwitch } from '../components/LangSwitch'
 import { assetUrl, hotelInfo } from '../data/menu'
@@ -136,16 +137,7 @@ export function PoolMenuPage() {
         })}
       </main>
 
-      <footer className="pool-footer">
-        <p className="pool-footer__thanks">{t(ui.thanks)}</p>
-        <p className="pool-footer__contact">
-          <a href={hotelInfo.websiteUrl} target="_blank" rel="noreferrer">
-            {hotelInfo.website}
-          </a>
-          <span aria-hidden>·</span>
-          <a href={`tel:${hotelInfo.phone.replace(/\s/g, '')}`}>{hotelInfo.phone}</a>
-        </p>
-      </footer>
+      <Footer />
 
       <CartFab />
       <CartDrawer kind="pool" roomNumber={null} />

@@ -5,8 +5,11 @@ import './Footer.css'
 
 export function Footer() {
   const { t, ui } = useLocale()
+  // Each page gets its own QR (restaurant / room / pool) — no cross-links in the UI
   const menuUrl =
-    typeof window !== 'undefined' ? window.location.href : hotelInfo.websiteUrl
+    typeof window !== 'undefined'
+      ? `${window.location.origin}${window.location.pathname}`
+      : hotelInfo.websiteUrl
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(menuUrl)}`
 
   return (

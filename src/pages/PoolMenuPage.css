@@ -396,42 +396,6 @@
   transform: scale(0.92);
 }
 
-/* —— Footer —— */
-.pool-footer {
-  text-align: center;
-  padding: 2rem 1.25rem max(2.5rem, env(safe-area-inset-bottom));
-  background: linear-gradient(180deg, transparent, rgba(61, 184, 197, 0.1));
-}
-
-.pool-footer__thanks {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-pool-script);
-  font-size: clamp(1.6rem, 5vw, 2.1rem);
-  color: var(--pool-deep);
-}
-
-.pool-footer__contact {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.45rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--pool-mid);
-}
-
-.pool-footer__contact a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.pool-footer__contact a:hover {
-  color: var(--pool-deep);
-  text-decoration: underline;
-}
-
 /* —— Toast —— */
 .pool-toast {
   position: fixed;
