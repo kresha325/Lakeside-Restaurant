@@ -1,15 +1,20 @@
+import { useLocation } from 'react-router-dom'
 import { ChefHat } from './Icons'
 import { hotelInfo } from '../data/menu'
 import { useLocale } from '../i18n/LocaleContext'
 import './Footer.css'
 
+function productionMenuUrl(pathname: string): string {
+  const site = hotelInfo.menuSiteUrl.replace(/\/$/, '')
+  const route = pathname.startsWith('/') ? pathname : `/${pathname}`
+  return route === '/' ? `${site}/` : `${site}${route}`
+}
+
 export function Footer() {
   const { t, ui } = useLocale()
-  // Each page gets its own QR (restaurant / room / pool) — no cross-links in the UI
-  const menuUrl =
-    typeof window !== 'undefined'
-      ? `${window.location.origin}${window.location.pathname}`
-      : hotelInfo.websiteUrl
+  const { pathname } = useLocation()
+  // Always encode the production URL so QR works from local preview and prints correctly
+  const menuUrl = productionMenuUrl(pathname)
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(menuUrl)}`
 
   return (

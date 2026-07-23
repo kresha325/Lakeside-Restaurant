@@ -56,7 +56,7 @@ export const categories: Category[] = [
     items: [
       item('mg1', L('Omletë klasike', 'Classic omelette'), 3),
       item('mg2', L('Omletë me përshutë', 'Ham omelette'), 3.5),
-      item('mg3', L('Omletë me perime freskuese', 'Fresh vegetable omelette'), 3.5),
+      item('mg3', L('Omletë me perime të freskëta', 'Fresh vegetable omelette'), 3.5),
       item('mg4', L('Pancakes', 'Pancakes'), 3.5),
       item('mg5', L('Llokuma', 'Llokuma (fried dough)'), 4),
     ],
@@ -297,6 +297,8 @@ export const hotelInfo = {
   phone: '+383 48 808 408',
   website: 'lakesideks.com',
   websiteUrl: 'https://lakesideks.com',
+  /** Public menu app (GitHub Pages) — used for QR codes */
+  menuSiteUrl: 'https://kresha325.github.io/Lakeside-Restaurant',
   facebook: 'https://www.facebook.com/Lakesidehotel2022',
   instagram: 'https://www.instagram.com/lakesideks/',
   tiktok: 'https://www.tiktok.com/@lakesideks',
