@@ -4,6 +4,7 @@ import { categories } from './data/menu'
 import { roomCategories } from './data/roomMenu'
 import { LocaleProvider } from './i18n/LocaleContext'
 import { MenuPage } from './pages/MenuPage'
+import { PoolMenuPage } from './pages/PoolMenuPage'
 import './App.css'
 
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
@@ -22,6 +23,7 @@ export default function App() {
               path="/room"
               element={<MenuPage kind="room" categories={roomCategories} />}
             />
+            <Route path="/pool" element={<PoolMenuPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

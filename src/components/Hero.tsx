@@ -7,7 +7,7 @@ import './Hero.css'
 
 const SLIDE_MS = 1500
 
-export type MenuKind = 'restaurant' | 'room'
+export type MenuKind = 'restaurant' | 'room' | 'pool'
 
 interface HeroProps {
   kind: MenuKind
@@ -25,7 +25,7 @@ export function Hero({ kind }: HeroProps) {
         alt: hotelInfo.name,
         position: 'center 55%',
       },
-      ...(isRoom
+      ...(isRoom || kind === 'pool'
         ? []
         : bestsellers.map((item) => ({
             src: assetUrl(item.image),
@@ -33,7 +33,7 @@ export function Hero({ kind }: HeroProps) {
             position: 'center',
           }))),
     ],
-    [t, isRoom],
+    [t, isRoom, kind],
   )
 
   useEffect(() => {
@@ -66,7 +66,11 @@ export function Hero({ kind }: HeroProps) {
 
       <p className="hero__menus">
         <span className="hero__menu-badge">
-          {isRoom ? t(ui.roomService) : t(ui.restaurantMenu)}
+          {kind === 'room'
+            ? t(ui.roomService)
+            : kind === 'pool'
+              ? t(ui.poolMenu)
+              : t(ui.restaurantMenu)}
         </span>
       </p>
 
@@ -80,11 +84,19 @@ export function Hero({ kind }: HeroProps) {
 
         <div className="hero__title-block">
           <p className="hero__restaurant">
-            {isRoom ? t(ui.roomService) : t(ui.restaurant)}
+            {kind === 'room'
+              ? t(ui.roomService)
+              : kind === 'pool'
+                ? t(ui.poolMenuTitle)
+                : t(ui.restaurant)}
           </p>
           <h2 className="hero__menu">{t(ui.menu)}</h2>
           <p className="hero__tagline">
-            {isRoom ? t(ui.roomTagline) : hotelInfo.tagline}
+            {kind === 'room'
+              ? t(ui.roomTagline)
+              : kind === 'pool'
+                ? t(ui.poolTagline)
+                : hotelInfo.tagline}
           </p>
           <span className="hero__flourish" aria-hidden />
         </div>

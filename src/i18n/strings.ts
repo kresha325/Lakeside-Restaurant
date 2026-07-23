@@ -16,6 +16,9 @@ export const ui = {
   restaurant: L('Restorant', 'Restaurant'),
   roomService: L('Room Menu', 'Room Menu'),
   restaurantMenu: L('Menu Restoranti', 'Restaurant Menu'),
+  poolMenu: L('Menu Pishina', 'Pool Bar Menu'),
+  poolMenuTitle: L('Menu Pishina', 'Pool Bar'),
+  poolTagline: L('Pije, Snacks & cocktails', 'Drinks, Snacks & cocktails'),
   menu: L('Menu', 'Menu'),
   roomTagline: L(
     'Menu e shërbimit në dhomë · 07:30 – 22:30',
