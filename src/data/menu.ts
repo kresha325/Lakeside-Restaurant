@@ -297,8 +297,8 @@ export const hotelInfo = {
   phone: '+383 48 808 408',
   website: 'lakesideks.com',
   websiteUrl: 'https://lakesideks.com',
-  /** Public menu app (GitHub Pages) — used for QR codes */
-  menuSiteUrl: 'https://kresha325.github.io/Lakeside-Restaurant',
+  /** Public menu app — used for QR codes */
+  menuSiteUrl: 'https://lakesidemenu.com',
   facebook: 'https://www.facebook.com/Lakesidehotel2022',
   instagram: 'https://www.instagram.com/lakesideks/',
   tiktok: 'https://www.tiktok.com/@lakesideks',

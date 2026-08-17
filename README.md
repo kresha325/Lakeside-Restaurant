@@ -4,7 +4,7 @@ Menu dixhitale për **Lakeside Hotel Spa & Conference**.
 
 ## Live
 
-https://kresha325.github.io/Lakeside-Restaurant/
+https://lakesidemenu.com/
 
 ## Lokal
 

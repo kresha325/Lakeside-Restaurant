@@ -19,5 +19,5 @@ function spaFallback() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), spaFallback()],
-  base: '/Lakeside-Restaurant/',
+  base: '/',
 })
