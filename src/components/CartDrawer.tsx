@@ -122,10 +122,17 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
 
     const amount = payment === 'cash' ? resolveCashAmount()! : undefined
 
+    const waLines = lines.map((l) => ({
+      id: l.item.id,
+      name: tx(l.item.name, 'sq'),
+      qty: l.qty,
+      price: l.item.price,
+    }))
+
     const message = buildWhatsAppMessage({
-      locale,
+      locale: 'sq',
       roomNumber,
-      lines: lineRows,
+      lines: waLines,
       total,
       payment,
       cashAmount: amount,
