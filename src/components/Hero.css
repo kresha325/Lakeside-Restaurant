@@ -73,23 +73,10 @@
   background: var(--gold);
 }
 
-.hero__lang .lang-switch {
+.hero__lang .lang-switch__trigger {
   background: rgba(15, 15, 15, 0.45);
   border-color: rgba(197, 160, 89, 0.45);
   backdrop-filter: blur(8px);
-}
-
-.hero__lang .lang-switch__btn {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.hero__lang .lang-switch__btn:hover:not(.is-active) {
-  color: #fff;
-}
-
-.hero__lang .lang-switch__btn.is-active {
-  background: var(--gold);
-  color: #fff;
 }
 
 .hero__content {

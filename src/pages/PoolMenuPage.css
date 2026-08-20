@@ -30,19 +30,20 @@
   border: 0;
 }
 
-.pool-app .lang-switch {
-  background: rgba(10, 77, 104, 0.35);
-  border-color: rgba(255, 255, 255, 0.35);
+.pool-app .lang-switch__trigger {
+  background: rgba(10, 77, 104, 0.45);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
   backdrop-filter: blur(8px);
 }
 
-.pool-app .lang-switch__btn {
-  color: rgba(255, 255, 255, 0.8);
+.pool-app .lang-switch__menu {
+  border-color: rgba(61, 184, 197, 0.35);
 }
 
-.pool-app .lang-switch__btn.is-active {
-  background: var(--pool-sun);
-  color: #12343f;
+.pool-app .lang-switch__option.is-active {
+  background: rgba(61, 184, 197, 0.18);
+  color: var(--pool-deep);
 }
 
 .pool-app .cart-fab {

@@ -24,7 +24,7 @@ function buildWhatsAppMessage(opts: {
   cashAmount?: number
 }): string {
   const { locale, roomNumber, lines, total, payment, cashAmount } = opts
-  const s = (value: { sq: string; en: string }) => tx(value, locale)
+  const s = (value: Parameters<typeof tx>[0]) => tx(value, locale)
 
   const header = roomNumber
     ? `*${s(ui.orderFromRoom)} ${roomNumber}*`
@@ -70,6 +70,18 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
         price: l.item.price,
       })),
     [lines, locale],
+  )
+
+  /** Waiter presentation always in Albanian */
+  const presentRows = useMemo(
+    () =>
+      lines.map((l) => ({
+        id: l.item.id,
+        name: tx(l.item.name, 'sq'),
+        qty: l.qty,
+        price: l.item.price,
+      })),
+    [lines],
   )
 
   useEffect(() => {
@@ -133,23 +145,26 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
     setOpen(false)
   }
 
+  const tSq = (value: Parameters<typeof tx>[0]) => tx(value, 'sq')
+
   if (presenting) {
     return (
       <div
         className="cart-drawer cart-drawer--present"
         role="dialog"
         aria-modal="true"
-        aria-label={t(ui.presentToWaiter)}
+        aria-label={tSq(ui.presentToWaiter)}
+        lang="sq"
       >
         <div className="cart-present">
           <header className="cart-present__header">
             <p className="cart-present__brand">{hotelInfo.name}</p>
-            <h2>{t(ui.orderHeader)}</h2>
-            <p className="cart-present__hint">{t(ui.presentHint)}</p>
+            <h2>{tSq(ui.orderHeader)}</h2>
+            <p className="cart-present__hint">{tSq(ui.presentHint)}</p>
           </header>
 
           <ul className="cart-present__list">
-            {lineRows.map((l) => (
+            {presentRows.map((l) => (
               <li key={l.id} className="cart-present__line">
                 <span className="cart-present__qty">{l.qty}×</span>
                 <span className="cart-present__name">{l.name}</span>
@@ -161,7 +176,7 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
           </ul>
 
           <div className="cart-present__total">
-            <span>{t(ui.cartTotal)}</span>
+            <span>{tSq(ui.cartTotal)}</span>
             <strong>€{total.toFixed(2)}</strong>
           </div>
 
@@ -171,14 +186,14 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
               className="cart-present__back"
               onClick={() => setPresenting(false)}
             >
-              {t(ui.presentBack)}
+              {tSq(ui.presentBack)}
             </button>
             <button
               type="button"
               className="cart-present__done"
               onClick={handlePresentDone}
             >
-              {t(ui.presentDone)}
+              {tSq(ui.presentDone)}
             </button>
           </div>
         </div>

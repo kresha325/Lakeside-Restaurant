@@ -1,14 +1,29 @@
-export type Locale = 'sq' | 'en'
+export type {
+  Locale,
+  LString,
+} from './locale'
 
-export type LString = { sq: string; en: string }
+export {
+  LOCALES,
+  LOCALE_LABELS,
+  LOCALE_HTML,
+  RTL_LOCALES,
+  L,
+  isLocale,
+} from './locale'
 
-export function L(sq: string, en: string): LString {
-  return { sq, en }
-}
+import { enDict } from './enDict'
+import { L, type Locale, type LString } from './locale'
 
 export function tx(value: LString | string, locale: Locale): string {
   if (typeof value === 'string') return value
-  return value[locale]
+  const direct = value[locale]
+  if (direct) return direct
+  if (locale !== 'sq' && locale !== 'en') {
+    const fromDict = enDict[value.en]?.[locale]
+    if (fromDict) return fromDict
+  }
+  return value.en || value.sq
 }
 
 export const ui = {
@@ -38,8 +53,6 @@ export const ui = {
   heroSlides: L('Fotot e heroit', 'Hero slides'),
   language: L('Gjuha', 'Language'),
   location: L('Lokacioni', 'Location'),
-  langSq: L('SQ', 'SQ'),
-  langEn: L('EN', 'EN'),
   emptyRoom: L(
     'Produktet e Room Menu do të shtohen së shpejti.',
     'Room Menu items will be added soon.',

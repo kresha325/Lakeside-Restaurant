@@ -7,7 +7,14 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { tx, ui, type Locale, type LString } from './strings'
+import {
+  isLocale,
+  LOCALE_HTML,
+  RTL_LOCALES,
+  type Locale,
+  type LString,
+} from './locale'
+import { tx, ui } from './strings'
 
 const STORAGE_KEY = 'lakeside-locale'
 
@@ -23,7 +30,7 @@ const LocaleContext = createContext<LocaleContextValue | null>(null)
 function readStoredLocale(): Locale {
   try {
     const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored === 'en' || stored === 'sq') return stored
+    if (stored && isLocale(stored)) return stored
   } catch {
     /* ignore */
   }
@@ -36,7 +43,8 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   )
 
   useEffect(() => {
-    document.documentElement.lang = locale === 'sq' ? 'sq' : 'en'
+    document.documentElement.lang = LOCALE_HTML[locale]
+    document.documentElement.dir = RTL_LOCALES.has(locale) ? 'rtl' : 'ltr'
     try {
       localStorage.setItem(STORAGE_KEY, locale)
     } catch {
