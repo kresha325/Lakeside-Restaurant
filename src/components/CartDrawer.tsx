@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { hotelInfo } from '../data/menu'
 import { useCart } from '../cart/CartContext'
 import { useLocale } from '../i18n/LocaleContext'
-import { tx, ui, type Locale } from '../i18n/strings'
+import { tx, ui } from '../i18n/strings'
 import type { MenuKind } from './Hero'
 import './CartDrawer.css'
 
@@ -15,20 +15,19 @@ interface CartDrawerProps {
   roomNumber: string | null
 }
 
+/** Staff WhatsApp order — always Albanian, regardless of guest UI language. */
 function buildWhatsAppMessage(opts: {
-  locale: Locale
   roomNumber: string | null
   lines: { name: string; qty: number; price: number }[]
   total: number
   payment: PaymentMethod
   cashAmount?: number
 }): string {
-  const { locale, roomNumber, lines, total, payment, cashAmount } = opts
-  const s = (value: Parameters<typeof tx>[0]) => tx(value, locale)
+  const { roomNumber, lines, total, payment, cashAmount } = opts
 
   const header = roomNumber
-    ? `*${s(ui.orderFromRoom)} ${roomNumber}*`
-    : `*${s(ui.order)}*`
+    ? `*Porosi nga dhoma ${roomNumber}*`
+    : `*Porosi*`
 
   const items = lines
     .map((l) => `• ${l.qty}x ${l.name} — €${(l.price * l.qty).toFixed(2)}`)
@@ -36,16 +35,16 @@ function buildWhatsAppMessage(opts: {
 
   const paymentLine =
     payment === 'pos'
-      ? `${s(ui.paymentLabel)}: POS`
-      : `${s(ui.paymentLabel)}: ${s(ui.paymentCash)} (€${cashAmount})`
+      ? 'Pagesa: POS'
+      : `Pagesa: Kesh (€${cashAmount})`
 
   return [
     header,
     '',
-    `*${s(ui.orderHeader)}*`,
+    '*Porosia*',
     items,
     '',
-    `*${s(ui.cartTotal)}: €${total.toFixed(2)}*`,
+    `*Totali: €${total.toFixed(2)}*`,
     paymentLine,
   ].join('\n')
 }
@@ -123,14 +122,15 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
     const amount = payment === 'cash' ? resolveCashAmount()! : undefined
 
     const waLines = lines.map((l) => ({
-      id: l.item.id,
-      name: tx(l.item.name, 'sq'),
+      name:
+        typeof l.item.name === 'string'
+          ? l.item.name
+          : l.item.name.sq || l.item.name.en,
       qty: l.qty,
       price: l.item.price,
     }))
 
     const message = buildWhatsAppMessage({
-      locale: 'sq',
       roomNumber,
       lines: waLines,
       total,
