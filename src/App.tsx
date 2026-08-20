@@ -7,7 +7,10 @@ import { MenuPage } from './pages/MenuPage'
 import { PoolMenuPage } from './pages/PoolMenuPage'
 import './App.css'
 
-const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+const basename =
+  import.meta.env.BASE_URL === '/'
+    ? undefined
+    : import.meta.env.BASE_URL.replace(/\/$/, '')
 
 export default function App() {
   return (
