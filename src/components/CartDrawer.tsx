@@ -30,13 +30,13 @@ function buildWhatsAppMessage(opts: {
     : `*Porosi*`
 
   const items = lines
-    .map((l) => `• ${l.qty}x ${l.name} — €${(l.price * l.qty).toFixed(2)}`)
+    .map((l) => `- ${l.qty}x ${l.name} - EUR ${(l.price * l.qty).toFixed(2)}`)
     .join('\n')
 
   const paymentLine =
     payment === 'pos'
       ? 'Pagesa: POS'
-      : `Pagesa: Kesh (€${cashAmount})`
+      : `Pagesa: Kesh (EUR ${cashAmount})`
 
   return [
     header,
@@ -44,9 +44,20 @@ function buildWhatsAppMessage(opts: {
     '*Porosia*',
     items,
     '',
-    `*Totali: €${total.toFixed(2)}*`,
+    `*Totali: EUR ${total.toFixed(2)}*`,
     paymentLine,
   ].join('\n')
+}
+
+function openWhatsApp(phone: string, message: string) {
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+  const anchor = document.createElement('a')
+  anchor.href = url
+  anchor.target = '_blank'
+  anchor.rel = 'noopener noreferrer'
+  document.body.appendChild(anchor)
+  anchor.click()
+  anchor.remove()
 }
 
 export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
@@ -117,33 +128,35 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
         return
       }
     }
-    if (lines.length === 0) return
 
-    const amount = payment === 'cash' ? resolveCashAmount()! : undefined
-
-    const waLines = lines.map((l) => ({
-      name:
-        typeof l.item.name === 'string'
-          ? l.item.name
-          : l.item.name.sq || l.item.name.en,
+    // Snapshot cart before any state updates so WA text keeps every selected item.
+    const orderLines = lines.map((l) => ({
+      name: tx(l.item.name, 'sq'),
       qty: l.qty,
       price: l.item.price,
     }))
+    if (orderLines.length === 0) return
+
+    const amount = payment === 'cash' ? resolveCashAmount()! : undefined
+    const orderTotal = orderLines.reduce((sum, l) => sum + l.price * l.qty, 0)
 
     const message = buildWhatsAppMessage({
       roomNumber,
-      lines: waLines,
-      total,
+      lines: orderLines,
+      total: orderTotal,
       payment,
       cashAmount: amount,
     })
 
     const phone = hotelInfo.phone.replace(/\D/g, '')
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
-    window.open(url, '_blank', 'noopener,noreferrer')
-    clear()
-    setOpen(false)
-    resetPayment()
+    openWhatsApp(phone, message)
+
+    // Defer reset — clearing/unmounting immediately can drop the WA prefill.
+    window.setTimeout(() => {
+      clear()
+      setOpen(false)
+      resetPayment()
+    }, 400)
   }
 
   const handlePresentDone = () => {
