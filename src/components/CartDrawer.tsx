@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { hotelInfo } from '../data/menu'
 import { useCart } from '../cart/CartContext'
 import { useLocale } from '../i18n/LocaleContext'
-import { tx, ui } from '../i18n/strings'
+import { tx } from '../i18n/strings'
 import type { MenuKind } from './Hero'
 import './CartDrawer.css'
 
