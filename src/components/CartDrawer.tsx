@@ -38,8 +38,12 @@ function buildWhatsAppMessage(opts: {
       ? 'Pagesa: POS'
       : `Pagesa: Kesh (EUR ${cashAmount})`
 
+  const now = new Date()
+  const time = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`
+
   return [
     header,
+    `Koha: ${time}`,
     '',
     '*Porosia*',
     items,
@@ -50,14 +54,18 @@ function buildWhatsAppMessage(opts: {
 }
 
 function openWhatsApp(phone: string, message: string) {
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
-  const anchor = document.createElement('a')
-  anchor.href = url
-  anchor.target = '_blank'
-  anchor.rel = 'noopener noreferrer'
-  document.body.appendChild(anchor)
-  anchor.click()
-  anchor.remove()
+  const text = encodeURIComponent(message)
+  const mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+  // wa.me often reopens an old Desktop draft and ignores new `text`.
+  // api / web.whatsapp.com replace the compose box more reliably.
+  const url = mobile
+    ? `https://api.whatsapp.com/send?phone=${phone}&text=${text}`
+    : `https://web.whatsapp.com/send?phone=${phone}&text=${text}`
+
+  void navigator.clipboard?.writeText(message).catch(() => {})
+
+  // Same-tab handoff keeps the full prefilled message intact.
+  window.location.assign(url)
 }
 
 export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
@@ -149,14 +157,11 @@ export function CartDrawer({ kind, roomNumber }: CartDrawerProps) {
     })
 
     const phone = hotelInfo.phone.replace(/\D/g, '')
-    openWhatsApp(phone, message)
 
-    // Defer reset — clearing/unmounting immediately can drop the WA prefill.
-    window.setTimeout(() => {
-      clear()
-      setOpen(false)
-      resetPayment()
-    }, 400)
+    clear()
+    setOpen(false)
+    resetPayment()
+    openWhatsApp(phone, message)
   }
 
   const handlePresentDone = () => {
