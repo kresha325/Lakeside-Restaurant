@@ -5,6 +5,7 @@ type ExtraLocale = Exclude<Locale, 'sq' | 'en'>
 /** English → other locales. Missing entries fall back to English in tx(). */
 export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
   "All": {
+
     "fr": "Tout",
     "de": "Alle",
     "hr": "Sve",
@@ -13,9 +14,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "全部",
     "es": "Todo",
     "it": "Tutti",
-    "tr": "Tümü"
+    "tr": "Tümü",
+    "he": "הכל"
   },
   "Restaurant": {
+
     "fr": "Restaurant",
     "de": "Restaurant",
     "hr": "Restoran",
@@ -24,9 +27,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "餐厅",
     "es": "Restaurante",
     "it": "Ristorante",
-    "tr": "Restoran"
+    "tr": "Restoran",
+    "he": "מסעדה"
   },
   "Room Menu": {
+
     "fr": "Menu chambre",
     "de": "Zimmermenü",
     "hr": "Room Menu",
@@ -35,9 +40,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "客房菜单",
     "es": "Menú de habitación",
     "it": "Menu camera",
-    "tr": "Oda Menüsü"
+    "tr": "Oda Menüsü",
+    "he": "תפריט חדר"
   },
   "Restaurant Menu": {
+
     "fr": "Menu restaurant",
     "de": "Restaurantmenü",
     "hr": "Jelovnik restorana",
@@ -46,9 +53,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "餐厅菜单",
     "es": "Menú del restaurante",
     "it": "Menu ristorante",
-    "tr": "Restoran Menüsü"
+    "tr": "Restoran Menüsü",
+    "he": "תפריט מסעדה"
   },
   "Pool Bar Menu": {
+
     "fr": "Menu Pool Bar",
     "de": "Pool-Bar-Menü",
     "hr": "Pool Bar Menu",
@@ -57,9 +66,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "泳池吧菜单",
     "es": "Menú Pool Bar",
     "it": "Menu Pool Bar",
-    "tr": "Havuz Bar Menüsü"
+    "tr": "Havuz Bar Menüsü",
+    "he": "תפריט בר הבריכה"
   },
   "Pool Bar": {
+
     "fr": "Pool Bar",
     "de": "Pool Bar",
     "hr": "Pool Bar",
@@ -68,9 +79,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "泳池吧",
     "es": "Pool Bar",
     "it": "Pool Bar",
-    "tr": "Havuz Bar"
+    "tr": "Havuz Bar",
+    "he": "בר הבריכה"
   },
   "Drinks, Snacks & cocktails": {
+
     "fr": "Boissons, snacks & cocktails",
     "de": "Getränke, Snacks & Cocktails",
     "hr": "Pića, snacks i kokteli",
@@ -79,9 +92,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "饮品、小吃和鸡尾酒",
     "es": "Bebidas, snacks y cócteles",
     "it": "Bevande, snack e cocktail",
-    "tr": "İçecekler, atıştırmalıklar ve kokteyller"
+    "tr": "İçecekler, atıştırmalıklar ve kokteyller",
+    "he": "שתייה, חטיפים וקוקטיילים"
   },
   "Menu": {
+
     "fr": "Menu",
     "de": "Menü",
     "hr": "Jelovnik",
@@ -90,9 +105,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "菜单",
     "es": "Menú",
     "it": "Menu",
-    "tr": "Menü"
+    "tr": "Menü",
+    "he": "תפריט"
   },
   "Room service menu · 07:30 – 22:30": {
+
     "fr": "Menu room service · 07:30 – 22:30",
     "de": "Zimmerservice-Menü · 07:30 – 22:30",
     "hr": "Room service jelovnik · 07:30 – 22:30",
@@ -101,9 +118,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "客房服务菜单 · 07:30 – 22:30",
     "es": "Menú de room service · 07:30 – 22:30",
     "it": "Menu room service · 07:30 – 22:30",
-    "tr": "Oda servisi menüsü · 07:30 – 22:30"
+    "tr": "Oda servisi menüsü · 07:30 – 22:30",
+    "he": "תפריט שירות חדרים · 07:30 – 22:30"
   },
   "Chef's Choice": {
+
     "fr": "Choix du chef",
     "de": "Empfehlung des Küchenchefs",
     "hr": "Izbor chefa",
@@ -112,9 +131,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "主厨精选",
     "es": "Elección del chef",
     "it": "Scelta dello chef",
-    "tr": "Şefin Seçimi"
+    "tr": "Şefin Seçimi",
+    "he": "בחירת השף"
   },
   "Fresh Ingredients": {
+
     "fr": "Ingrédients frais",
     "de": "Frische Zutaten",
     "hr": "Svježi sastojci",
@@ -123,9 +144,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "新鲜食材",
     "es": "Ingredientes frescos",
     "it": "Ingredienti freschi",
-    "tr": "Taze Malzemeler"
+    "tr": "Taze Malzemeler",
+    "he": "מרכיבים טריים"
   },
   "We source the finest seasonal produce and local specialties to craft every dish with care and authenticity.": {
+
     "fr": "Nous sélectionnons les meilleurs produits de saison et spécialités locales pour préparer chaque plat avec soin et authenticité.",
     "de": "Wir verwenden die besten saisonalen Produkte und lokalen Spezialitäten, um jedes Gericht mit Sorgfalt und Authentizität zuzubereiten.",
     "hr": "Koristimo najbolje sezonske namirnice i lokalne specijalitete te svako jelo pripremamo s pažnjom i autentičnošću.",
@@ -134,9 +157,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "我们选用当季优质食材与本地特色，精心烹制每一道菜。",
     "es": "Seleccionamos los mejores productos de temporada y especialidades locales para preparar cada plato con cuidado y autenticidad.",
     "it": "Selezioniamo i migliori prodotti di stagione e le specialità locali per preparare ogni piatto con cura e autenticità.",
-    "tr": "Her yemeği özen ve özgünlükle hazırlamak için en iyi mevsimlik ürünleri ve yerel spesiyaliteleri kullanıyoruz."
+    "tr": "Her yemeği özen ve özgünlükle hazırlamak için en iyi mevsimlik ürünleri ve yerel spesiyaliteleri kullanıyoruz.",
+    "he": "אנו בוחרים את חומרי הגלם העונתיים הטובים ביותר ואת המאכלים המקומיים כדי להכין כל מנה בקפידה ובאותנטיות."
   },
   "Scan for menu": {
+
     "fr": "Scannez le menu",
     "de": "Menü scannen",
     "hr": "Skenirajte jelovnik",
@@ -145,9 +170,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "扫码查看菜单",
     "es": "Escanea el menú",
     "it": "Scansiona il menu",
-    "tr": "Menüyü tara"
+    "tr": "Menüyü tara",
+    "he": "סרוק לתפריט"
   },
   "Scan • Browse • Enjoy": {
+
     "fr": "Scannez • Parcourez • Savourez",
     "de": "Scannen • Stöbern • Genießen",
     "hr": "Skeniraj • Pregledaj • Uživaj",
@@ -156,9 +183,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "扫描 • 浏览 • 享用",
     "es": "Escanea • Explora • Disfruta",
     "it": "Scansiona • Sfoglia • Gustati",
-    "tr": "Tara • Gez • Tadını çıkar"
+    "tr": "Tara • Gez • Tadını çıkar",
+    "he": "סרוק • עיין • תהנה"
   },
   "Thank you for trusting us!": {
+
     "fr": "Merci de votre confiance !",
     "de": "Danke für Ihr Vertrauen!",
     "hr": "Hvala na povjerenju!",
@@ -167,9 +196,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "感谢您的信任！",
     "es": "¡Gracias por confiar en nosotros!",
     "it": "Grazie per la fiducia!",
-    "tr": "Bize güvendiğiniz için teşekkürler!"
+    "tr": "Bize güvendiğiniz için teşekkürler!",
+    "he": "תודה שסמכתם עלינו!"
   },
   "Add": {
+
     "fr": "Ajouter",
     "de": "Hinzufügen",
     "hr": "Dodaj",
@@ -178,9 +209,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "添加",
     "es": "Añadir",
     "it": "Aggiungi",
-    "tr": "Ekle"
+    "tr": "Ekle",
+    "he": "הוסף"
   },
   "Menu categories": {
+
     "fr": "Catégories du menu",
     "de": "Menükategorien",
     "hr": "Kategorije jelovnika",
@@ -189,9 +222,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "菜单分类",
     "es": "Categorías del menú",
     "it": "Categorie del menu",
-    "tr": "Menü kategorileri"
+    "tr": "Menü kategorileri",
+    "he": "קטגוריות התפריט"
   },
   "Hero slides": {
+
     "fr": "Diapositives hero",
     "de": "Hero-Slides",
     "hr": "Hero slajdovi",
@@ -200,9 +235,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "主视觉图片",
     "es": "Diapositivas hero",
     "it": "Slide hero",
-    "tr": "Hero slaytları"
+    "tr": "Hero slaytları",
+    "he": "שקופיות ראשיות"
   },
   "Language": {
+
     "fr": "Langue",
     "de": "Sprache",
     "hr": "Jezik",
@@ -211,9 +248,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "语言",
     "es": "Idioma",
     "it": "Lingua",
-    "tr": "Dil"
+    "tr": "Dil",
+    "he": "שפה"
   },
   "Location": {
+
     "fr": "Emplacement",
     "de": "Standort",
     "hr": "Lokacija",
@@ -222,9 +261,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "位置",
     "es": "Ubicación",
     "it": "Posizione",
-    "tr": "Konum"
+    "tr": "Konum",
+    "he": "מיקום"
   },
   "Room Menu items will be added soon.": {
+
     "fr": "Les articles du Room Menu seront bientôt ajoutés.",
     "de": "Zimmermenü-Artikel folgen in Kürze.",
     "hr": "Stavke Room Menija bit će uskoro dodane.",
@@ -233,9 +274,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "客房菜单商品即将添加。",
     "es": "Los artículos del Room Menu se añadirán pronto.",
     "it": "Gli articoli del Room Menu saranno aggiunti a breve.",
-    "tr": "Oda Menüsü ürünleri yakında eklenecek."
+    "tr": "Oda Menüsü ürünleri yakında eklenecek.",
+    "he": "פריטי תפריט החדר יתווספו בקרוב."
   },
   "Welcome": {
+
     "fr": "Bienvenue",
     "de": "Willkommen",
     "hr": "Dobrodošli",
@@ -244,9 +287,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "欢迎",
     "es": "Bienvenido",
     "it": "Benvenuto",
-    "tr": "Hoş geldiniz"
+    "tr": "Hoş geldiniz",
+    "he": "ברוכים הבאים"
   },
   "Enter your room number to continue to the Room Menu.": {
+
     "fr": "Entrez votre numéro de chambre pour accéder au Room Menu.",
     "de": "Geben Sie Ihre Zimmernummer ein, um zum Zimmermenü zu gelangen.",
     "hr": "Unesite broj sobe za nastavak na Room Menu.",
@@ -255,9 +300,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请输入房号以继续进入客房菜单。",
     "es": "Introduce tu número de habitación para continuar al Room Menu.",
     "it": "Inserisci il numero della camera per continuare al Room Menu.",
-    "tr": "Oda Menüsüne devam etmek için oda numaranızı girin."
+    "tr": "Oda Menüsüne devam etmek için oda numaranızı girin.",
+    "he": "הזינו את מספר החדר כדי להמשיך לתפריט החדר."
   },
   "Room number": {
+
     "fr": "Numéro de chambre",
     "de": "Zimmernummer",
     "hr": "Broj sobe",
@@ -266,9 +313,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "房号",
     "es": "Número de habitación",
     "it": "Numero camera",
-    "tr": "Oda numarası"
+    "tr": "Oda numarası",
+    "he": "מספר חדר"
   },
   "e.g. 204": {
+
     "fr": "ex. 204",
     "de": "z. B. 204",
     "hr": "npr. 204",
@@ -277,9 +326,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "例如 204",
     "es": "p. ej. 204",
     "it": "es. 204",
-    "tr": "örn. 204"
+    "tr": "örn. 204",
+    "he": "לדוגמה 204"
   },
   "Continue to menu": {
+
     "fr": "Continuer vers le menu",
     "de": "Weiter zum Menü",
     "hr": "Nastavi na jelovnik",
@@ -288,9 +339,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "继续到菜单",
     "es": "Continuar al menú",
     "it": "Continua al menu",
-    "tr": "Menüye devam et"
+    "tr": "Menüye devam et",
+    "he": "המשך לתפריט"
   },
   "Please enter a valid room number.": {
+
     "fr": "Veuillez entrer un numéro de chambre valide.",
     "de": "Bitte geben Sie eine gültige Zimmernummer ein.",
     "hr": "Unesite važeći broj sobe.",
@@ -299,9 +352,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请输入有效房号。",
     "es": "Introduce un número de habitación válido.",
     "it": "Inserisci un numero di camera valido.",
-    "tr": "Geçerli bir oda numarası girin."
+    "tr": "Geçerli bir oda numarası girin.",
+    "he": "נא להזין מספר חדר תקין."
   },
   "Room": {
+
     "fr": "Chambre",
     "de": "Zimmer",
     "hr": "Soba",
@@ -310,9 +365,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "房间",
     "es": "Habitación",
     "it": "Camera",
-    "tr": "Oda"
+    "tr": "Oda",
+    "he": "חדר"
   },
   "Change": {
+
     "fr": "Modifier",
     "de": "Ändern",
     "hr": "Promijeni",
@@ -321,9 +378,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "更改",
     "es": "Cambiar",
     "it": "Cambia",
-    "tr": "Değiştir"
+    "tr": "Değiştir",
+    "he": "שנה"
   },
   "Cart": {
+
     "fr": "Panier",
     "de": "Warenkorb",
     "hr": "Košarica",
@@ -332,9 +391,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "购物车",
     "es": "Carrito",
     "it": "Carrello",
-    "tr": "Sepet"
+    "tr": "Sepet",
+    "he": "עגלה"
   },
   "Your cart is empty.": {
+
     "fr": "Votre panier est vide.",
     "de": "Ihr Warenkorb ist leer.",
     "hr": "Vaša košarica je prazna.",
@@ -343,9 +404,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "购物车是空的。",
     "es": "Tu carrito está vacío.",
     "it": "Il carrello è vuoto.",
-    "tr": "Sepetiniz boş."
+    "tr": "Sepetiniz boş.",
+    "he": "העגלה ריקה."
   },
   "Total": {
+
     "fr": "Total",
     "de": "Gesamt",
     "hr": "Ukupno",
@@ -354,9 +417,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "合计",
     "es": "Total",
     "it": "Totale",
-    "tr": "Toplam"
+    "tr": "Toplam",
+    "he": "סה״כ"
   },
   "Order on WhatsApp": {
+
     "fr": "Commander sur WhatsApp",
     "de": "Über WhatsApp bestellen",
     "hr": "Naruči na WhatsAppu",
@@ -365,9 +430,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "通过 WhatsApp 下单",
     "es": "Pedir por WhatsApp",
     "it": "Ordina su WhatsApp",
-    "tr": "WhatsApp ile sipariş ver"
+    "tr": "WhatsApp ile sipariş ver",
+    "he": "הזמנה ב-WhatsApp"
   },
   "Show to waiter": {
+
     "fr": "Montrer au serveur",
     "de": "Kellner zeigen",
     "hr": "Pokaži konobaru",
@@ -376,9 +443,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "出示给服务员",
     "es": "Mostrar al camarero",
     "it": "Mostra al cameriere",
-    "tr": "Garsona göster"
+    "tr": "Garsona göster",
+    "he": "הצג למלצר"
   },
   "Show this screen to your waiter to place the order.": {
+
     "fr": "Montrez cet écran au serveur pour passer la commande.",
     "de": "Zeigen Sie diesen Bildschirm dem Kellner, um zu bestellen.",
     "hr": "Pokažite ovaj zaslon konobaru za narudžbu.",
@@ -387,9 +456,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请向服务员出示此屏幕以下单。",
     "es": "Muestra esta pantalla al camarero para hacer el pedido.",
     "it": "Mostra questa schermata al cameriere per ordinare.",
-    "tr": "Sipariş vermek için bu ekranı garsona gösterin."
+    "tr": "Sipariş vermek için bu ekranı garsona gösterin.",
+    "he": "הציגו מסך זה למלצר כדי לבצע את ההזמנה."
   },
   "Done": {
+
     "fr": "Terminé",
     "de": "Fertig",
     "hr": "Gotovo",
@@ -398,9 +469,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "完成",
     "es": "Listo",
     "it": "Fine",
-    "tr": "Bitti"
+    "tr": "Bitti",
+    "he": "סיום"
   },
   "Back": {
+
     "fr": "Retour",
     "de": "Zurück",
     "hr": "Natrag",
@@ -409,9 +482,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "返回",
     "es": "Volver",
     "it": "Indietro",
-    "tr": "Geri"
+    "tr": "Geri",
+    "he": "חזרה"
   },
   "added to cart": {
+
     "fr": "ajouté au panier",
     "de": "zum Warenkorb hinzugefügt",
     "hr": "dodano u košaricu",
@@ -420,9 +495,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "已加入购物车",
     "es": "añadido al carrito",
     "it": "aggiunto al carrello",
-    "tr": "sepete eklendi"
+    "tr": "sepete eklendi",
+    "he": "נוסף לעגלה"
   },
   "Payment method": {
+
     "fr": "Mode de paiement",
     "de": "Zahlungsart",
     "hr": "Način plaćanja",
@@ -431,9 +508,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "支付方式",
     "es": "Método de pago",
     "it": "Metodo di pagamento",
-    "tr": "Ödeme yöntemi"
+    "tr": "Ödeme yöntemi",
+    "he": "אמצעי תשלום"
   },
   "Payment": {
+
     "fr": "Paiement",
     "de": "Zahlung",
     "hr": "Plaćanje",
@@ -442,9 +521,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "付款",
     "es": "Pago",
     "it": "Pagamento",
-    "tr": "Ödeme"
+    "tr": "Ödeme",
+    "he": "תשלום"
   },
   "Card (POS)": {
+
     "fr": "Carte (POS)",
     "de": "Karte (POS)",
     "hr": "Kartica (POS)",
@@ -453,9 +534,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "刷卡（POS）",
     "es": "Tarjeta (POS)",
     "it": "Carta (POS)",
-    "tr": "Kart (POS)"
+    "tr": "Kart (POS)",
+    "he": "כרטיס (POS)"
   },
   "Cash": {
+
     "fr": "Espèces",
     "de": "Bar",
     "hr": "Gotovina",
@@ -464,9 +547,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "现金",
     "es": "Efectivo",
     "it": "Contanti",
-    "tr": "Nakit"
+    "tr": "Nakit",
+    "he": "מזומן"
   },
   "Cash denomination": {
+
     "fr": "Coupure",
     "de": "Scheinbetrag",
     "hr": "Apoen",
@@ -475,9 +560,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "现金面额",
     "es": "Denominación",
     "it": "Taglio",
-    "tr": "Banknot tutarı"
+    "tr": "Banknot tutarı",
+    "he": "סכום המזומן"
   },
   "Other": {
+
     "fr": "Autre",
     "de": "Andere",
     "hr": "Ostalo",
@@ -486,9 +573,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "其他",
     "es": "Otro",
     "it": "Altro",
-    "tr": "Diğer"
+    "tr": "Diğer",
+    "he": "אחר"
   },
   "Enter amount (€)": {
+
     "fr": "Entrez le montant (€)",
     "de": "Betrag eingeben (€)",
     "hr": "Unesite iznos (€)",
@@ -497,9 +586,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "输入金额（€）",
     "es": "Introduce el importe (€)",
     "it": "Inserisci l’importo (€)",
-    "tr": "Tutarı girin (€)"
+    "tr": "Tutarı girin (€)",
+    "he": "הזינו סכום (€)"
   },
   "Select or enter the bill denomination for easier payment.": {
+
     "fr": "Sélectionnez ou saisissez la coupure pour faciliter le paiement.",
     "de": "Wählen oder geben Sie den Scheinbetrag für eine einfachere Zahlung ein.",
     "hr": "Odaberite ili unesite apoen radi lakšeg plaćanja.",
@@ -508,9 +599,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请选择或输入面额以便付款。",
     "es": "Selecciona o introduce la denominación para facilitar el pago.",
     "it": "Seleziona o inserisci il taglio per un pagamento più semplice.",
-    "tr": "Ödemeyi kolaylaştırmak için tutarı seçin veya girin."
+    "tr": "Ödemeyi kolaylaştırmak için tutarı seçin veya girin.",
+    "he": "בחרו או הזינו את סכום השטר לתשלום נוח יותר."
   },
   "Order": {
+
     "fr": "Commande",
     "de": "Bestellung",
     "hr": "Narudžba",
@@ -519,9 +612,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "订单",
     "es": "Pedido",
     "it": "Ordine",
-    "tr": "Sipariş"
+    "tr": "Sipariş",
+    "he": "הזמנה"
   },
   "Order from room": {
+
     "fr": "Commande depuis la chambre",
     "de": "Bestellung aus dem Zimmer",
     "hr": "Narudžba iz sobe",
@@ -530,9 +625,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "客房点单",
     "es": "Pedido desde la habitación",
     "it": "Ordine dalla camera",
-    "tr": "Odadan sipariş"
+    "tr": "Odadan sipariş",
+    "he": "הזמנה מהחדר"
   },
   "Decrease quantity": {
+
     "fr": "Diminuer la quantité",
     "de": "Menge verringern",
     "hr": "Smanji količinu",
@@ -541,9 +638,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "减少数量",
     "es": "Reducir cantidad",
     "it": "Diminuisci quantità",
-    "tr": "Miktarı azalt"
+    "tr": "Miktarı azalt",
+    "he": "הקטן כמות"
   },
   "Increase quantity": {
+
     "fr": "Augmenter la quantité",
     "de": "Menge erhöhen",
     "hr": "Povećaj količinu",
@@ -552,9 +651,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "增加数量",
     "es": "Aumentar cantidad",
     "it": "Aumenta quantità",
-    "tr": "Miktarı artır"
+    "tr": "Miktarı artır",
+    "he": "הגדל כמות"
   },
   "Remove": {
+
     "fr": "Retirer",
     "de": "Entfernen",
     "hr": "Ukloni",
@@ -563,9 +664,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "移除",
     "es": "Eliminar",
     "it": "Rimuovi",
-    "tr": "Kaldır"
+    "tr": "Kaldır",
+    "he": "הסר"
   },
   "Close": {
+
     "fr": "Fermer",
     "de": "Schließen",
     "hr": "Zatvori",
@@ -574,9 +677,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "关闭",
     "es": "Cerrar",
     "it": "Chiudi",
-    "tr": "Kapat"
+    "tr": "Kapat",
+    "he": "סגור"
   },
   "Select a payment method.": {
+
     "fr": "Sélectionnez un mode de paiement.",
     "de": "Wählen Sie eine Zahlungsart.",
     "hr": "Odaberite način plaćanja.",
@@ -585,9 +690,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请选择支付方式。",
     "es": "Selecciona un método de pago.",
     "it": "Seleziona un metodo di pagamento.",
-    "tr": "Bir ödeme yöntemi seçin."
+    "tr": "Bir ödeme yöntemi seçin.",
+    "he": "בחרו אמצעי תשלום."
   },
   "Select or enter a cash denomination.": {
+
     "fr": "Sélectionnez ou saisissez une coupure.",
     "de": "Wählen oder geben Sie einen Scheinbetrag ein.",
     "hr": "Odaberite ili unesite apoen.",
@@ -596,9 +703,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请选择或输入现金面额。",
     "es": "Selecciona o introduce una denominación.",
     "it": "Seleziona o inserisci un taglio.",
-    "tr": "Bir tutar seçin veya girin."
+    "tr": "Bir tutar seçin veya girin.",
+    "he": "בחרו או הזינו סכום מזומן."
   },
   "Enter a valid amount.": {
+
     "fr": "Entrez un montant valide.",
     "de": "Geben Sie einen gültigen Betrag ein.",
     "hr": "Unesite važeći iznos.",
@@ -607,9 +716,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "请输入有效金额。",
     "es": "Introduce un importe válido.",
     "it": "Inserisci un importo valido.",
-    "tr": "Geçerli bir tutar girin."
+    "tr": "Geçerli bir tutar girin.",
+    "he": "הזינו סכום תקין."
   },
   "Breakfast": {
+
     "fr": "Petit-déjeuner",
     "de": "Frühstück",
     "hr": "Doručak",
@@ -618,9 +729,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "早餐",
     "es": "Desayuno",
     "it": "Colazione",
-    "tr": "Kahvaltı"
+    "tr": "Kahvaltı",
+    "he": "ארוחת בוקר"
   },
   "Soups": {
+
     "fr": "Soupes",
     "de": "Suppen",
     "hr": "Juhe",
@@ -629,9 +742,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "汤类",
     "es": "Sopas",
     "it": "Zuppe",
-    "tr": "Çorbalar"
+    "tr": "Çorbalar",
+    "he": "מרקים"
   },
   "Salads": {
+
     "fr": "Salades",
     "de": "Salate",
     "hr": "Salate",
@@ -640,9 +755,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "沙拉",
     "es": "Ensaladas",
     "it": "Insalate",
-    "tr": "Salatalar"
+    "tr": "Salatalar",
+    "he": "סלטים"
   },
   "Cold appetizers": {
+
     "fr": "Entrées froides",
     "de": "Kalte Vorspeisen",
     "hr": "Hladna predjela",
@@ -651,9 +768,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冷前菜",
     "es": "Entrantes fríos",
     "it": "Antipasti freddi",
-    "tr": "Soğuk mezeler"
+    "tr": "Soğuk mezeler",
+    "he": "מנות ראשונות קרות"
   },
   "Cold starters": {
+
     "fr": "Entrées froides",
     "de": "Kalte Starter",
     "hr": "Hladni starteri",
@@ -662,9 +781,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冷前菜",
     "es": "Entrantes fríos",
     "it": "Antipasti freddi",
-    "tr": "Soğuk başlangıçlar"
+    "tr": "Soğuk başlangıçlar",
+    "he": "מנות פתיחה קרות"
   },
   "Hot appetizers": {
+
     "fr": "Entrées chaudes",
     "de": "Warme Vorspeisen",
     "hr": "Topla predjela",
@@ -673,9 +794,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "热前菜",
     "es": "Entrantes calientes",
     "it": "Antipasti caldi",
-    "tr": "Sıcak mezeler"
+    "tr": "Sıcak mezeler",
+    "he": "מנות ראשונות חמות"
   },
   "Hot starters": {
+
     "fr": "Entrées chaudes",
     "de": "Warme Starter",
     "hr": "Topli starteri",
@@ -684,9 +807,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "热前菜",
     "es": "Entrantes calientes",
     "it": "Antipasti caldi",
-    "tr": "Sıcak başlangıçlar"
+    "tr": "Sıcak başlangıçlar",
+    "he": "מנות פתיחה חמות"
   },
   "Traditional Sofra": {
+
     "fr": "Sofra traditionnelle",
     "de": "Traditionelle Sofra",
     "hr": "Tradicionalna sofra",
@@ -695,9 +820,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "传统餐桌",
     "es": "Sofra tradicional",
     "it": "Sofra tradizionale",
-    "tr": "Geleneksel Sofra"
+    "tr": "Geleneksel Sofra",
+    "he": "סופרה מסורתית"
   },
   "Sofra": {
+
     "fr": "Sofra",
     "de": "Sofra",
     "hr": "Sofra",
@@ -706,9 +833,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "餐桌",
     "es": "Sofra",
     "it": "Sofra",
-    "tr": "Sofra"
+    "tr": "Sofra",
+    "he": "סופרה"
   },
   "Pizzas": {
+
     "fr": "Pizzas",
     "de": "Pizzen",
     "hr": "Pizze",
@@ -717,9 +846,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "披萨",
     "es": "Pizzas",
     "it": "Pizze",
-    "tr": "Pizzalar"
+    "tr": "Pizzalar",
+    "he": "פיצות"
   },
   "Pizza": {
+
     "fr": "Pizza",
     "de": "Pizza",
     "hr": "Pizza",
@@ -728,9 +859,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "披萨",
     "es": "Pizza",
     "it": "Pizza",
-    "tr": "Pizza"
+    "tr": "Pizza",
+    "he": "פיצה"
   },
   "Pasta": {
+
     "fr": "Pâtes",
     "de": "Pasta",
     "hr": "Tjestenina",
@@ -739,9 +872,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "意面",
     "es": "Pasta",
     "it": "Pasta",
-    "tr": "Makarna"
+    "tr": "Makarna",
+    "he": "פסטה"
   },
   "Risotto": {
+
     "fr": "Risotto",
     "de": "Risotto",
     "hr": "Rižoto",
@@ -750,9 +885,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烩饭",
     "es": "Risotto",
     "it": "Risotto",
-    "tr": "Risotto"
+    "tr": "Risotto",
+    "he": "ריזוטו"
   },
   "Grill specialties": {
+
     "fr": "Spécialités du grill",
     "de": "Grill-Spezialitäten",
     "hr": "Specijaliteti s roštilja",
@@ -761,9 +898,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烧烤特色",
     "es": "Especialidades a la parrilla",
     "it": "Specialità alla griglia",
-    "tr": "Izgara spesiyaliteleri"
+    "tr": "Izgara spesiyaliteleri",
+    "he": "מיוחדים מהגריל"
   },
   "Grill": {
+
     "fr": "Grill",
     "de": "Grill",
     "hr": "Roštilj",
@@ -772,9 +911,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烧烤",
     "es": "Parrilla",
     "it": "Griglia",
-    "tr": "Izgara"
+    "tr": "Izgara",
+    "he": "גריל"
   },
   "Oven specialties": {
+
     "fr": "Spécialités au four",
     "de": "Ofen-Spezialitäten",
     "hr": "Specijaliteti iz pećnice",
@@ -783,9 +924,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤箱特色",
     "es": "Especialidades al horno",
     "it": "Specialità al forno",
-    "tr": "Fırın spesiyaliteleri"
+    "tr": "Fırın spesiyaliteleri",
+    "he": "מיוחדים מהתנור"
   },
   "Oven": {
+
     "fr": "Four",
     "de": "Ofen",
     "hr": "Pećnica",
@@ -794,9 +937,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤箱",
     "es": "Horno",
     "it": "Forno",
-    "tr": "Fırın"
+    "tr": "Fırın",
+    "he": "תנור"
   },
   "Fried specialties": {
+
     "fr": "Spécialités frites",
     "de": "Frittierte Spezialitäten",
     "hr": "Prženi specijaliteti",
@@ -805,9 +950,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "油炸特色",
     "es": "Especialidades fritas",
     "it": "Specialità fritte",
-    "tr": "Kızartma spesiyaliteleri"
+    "tr": "Kızartma spesiyaliteleri",
+    "he": "מיוחדים מטוגנים"
   },
   "Fried": {
+
     "fr": "Frit",
     "de": "Frittiert",
     "hr": "Prženo",
@@ -816,9 +963,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "油炸",
     "es": "Frito",
     "it": "Fritto",
-    "tr": "Kızartma"
+    "tr": "Kızartma",
+    "he": "מטוגן"
   },
   "Cold seafood appetizers": {
+
     "fr": "Antipasti de fruits de mer froids",
     "de": "Kalte Meeresfrüchte-Vorspeisen",
     "hr": "Hladna morska predjela",
@@ -827,9 +976,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冷海鲜前菜",
     "es": "Entrantes fríos de marisco",
     "it": "Antipasti di mare freddi",
-    "tr": "Soğuk deniz mahsulleri"
+    "tr": "Soğuk deniz mahsulleri",
+    "he": "מנות פתיחה קרות מפירות ים"
   },
   "Cold seafood": {
+
     "fr": "Fruits de mer froids",
     "de": "Kalte Meeresfrüchte",
     "hr": "Hladni morski plodovi",
@@ -838,9 +989,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冷海鲜",
     "es": "Mariscos fríos",
     "it": "Frutti di mare freddi",
-    "tr": "Soğuk deniz ürünleri"
+    "tr": "Soğuk deniz ürünleri",
+    "he": "פירות ים קרים"
   },
   "Hot seafood appetizers": {
+
     "fr": "Antipasti de fruits de mer chauds",
     "de": "Warme Meeresfrüchte-Vorspeisen",
     "hr": "Topla morska predjela",
@@ -849,9 +1002,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "热海鲜前菜",
     "es": "Entrantes calientes de marisco",
     "it": "Antipasti di mare caldi",
-    "tr": "Sıcak deniz mahsulleri"
+    "tr": "Sıcak deniz mahsulleri",
+    "he": "מנות פתיחה חמות מפירות ים"
   },
   "Hot seafood": {
+
     "fr": "Fruits de mer chauds",
     "de": "Warme Meeresfrüchte",
     "hr": "Topli morski plodovi",
@@ -860,9 +1015,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "热海鲜",
     "es": "Mariscos calientes",
     "it": "Frutti di mare caldi",
-    "tr": "Sıcak deniz ürünleri"
+    "tr": "Sıcak deniz ürünleri",
+    "he": "פירות ים חמים"
   },
   "Seafood specialties": {
+
     "fr": "Spécialités de fruits de mer",
     "de": "Meeresfrüchte-Spezialitäten",
     "hr": "Specijaliteti od morskih plodova",
@@ -871,9 +1028,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜特色",
     "es": "Especialidades de marisco",
     "it": "Specialità di mare",
-    "tr": "Deniz ürünü spesiyaliteleri"
+    "tr": "Deniz ürünü spesiyaliteleri",
+    "he": "מיוחדים מפירות ים"
   },
   "Seafood": {
+
     "fr": "Fruits de mer",
     "de": "Meeresfrüchte",
     "hr": "Morski plodovi",
@@ -882,9 +1041,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜",
     "es": "Mariscos",
     "it": "Frutti di mare",
-    "tr": "Deniz ürünleri"
+    "tr": "Deniz ürünleri",
+    "he": "פירות ים"
   },
   "Desserts": {
+
     "fr": "Desserts",
     "de": "Desserts",
     "hr": "Deserti",
@@ -893,9 +1054,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "甜点",
     "es": "Postres",
     "it": "Dolci",
-    "tr": "Tatlılar"
+    "tr": "Tatlılar",
+    "he": "קינוחים"
   },
   "Drinks": {
+
     "fr": "Boissons",
     "de": "Getränke",
     "hr": "Pića",
@@ -904,9 +1067,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "饮品",
     "es": "Bebidas",
     "it": "Bevande",
-    "tr": "İçecekler"
+    "tr": "İçecekler",
+    "he": "שתייה"
   },
   "Fast Food": {
+
     "fr": "Fast Food",
     "de": "Fast Food",
     "hr": "Fast Food",
@@ -915,9 +1080,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "快餐",
     "es": "Comida rápida",
     "it": "Fast Food",
-    "tr": "Fast Food"
+    "tr": "Fast Food",
+    "he": "מזון מהיר"
   },
   "Ice Cream": {
+
     "fr": "Glace",
     "de": "Eis",
     "hr": "Sladoled",
@@ -926,9 +1093,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冰淇淋",
     "es": "Helado",
     "it": "Gelato",
-    "tr": "Dondurma"
+    "tr": "Dondurma",
+    "he": "גלידה"
   },
   "Cocktails": {
+
     "fr": "Cocktails",
     "de": "Cocktails",
     "hr": "Kokteli",
@@ -937,9 +1106,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡尾酒",
     "es": "Cócteles",
     "it": "Cocktail",
-    "tr": "Kokteyller"
+    "tr": "Kokteyller",
+    "he": "קוקטיילים"
   },
   "Non Alcoholic Cocktails": {
+
     "fr": "Cocktails sans alcool",
     "de": "Alkoholfreie Cocktails",
     "hr": "Bezalkoholni kokteli",
@@ -948,9 +1119,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "无酒精鸡尾酒",
     "es": "Cócteles sin alcohol",
     "it": "Cocktail analcolici",
-    "tr": "Alkolsüz kokteyller"
+    "tr": "Alkolsüz kokteyller",
+    "he": "קוקטיילים ללא אלכוהול"
   },
   "Mocktails": {
+
     "fr": "Mocktails",
     "de": "Mocktails",
     "hr": "Mockteli",
@@ -959,9 +1132,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "无酒精特调",
     "es": "Mocktails",
     "it": "Mocktail",
-    "tr": "Mocktaillar"
+    "tr": "Mocktaillar",
+    "he": "מוקטיילים"
   },
   "Lemonades": {
+
     "fr": "Limonades",
     "de": "Limonaden",
     "hr": "Limunade",
@@ -970,9 +1145,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "柠檬水",
     "es": "Limonadas",
     "it": "Limonate",
-    "tr": "Limonatalar"
+    "tr": "Limonatalar",
+    "he": "לימונדות"
   },
   "Lunch & Dinner": {
+
     "fr": "Déjeuner & dîner",
     "de": "Mittagessen & Abendessen",
     "hr": "Ručak i večera",
@@ -981,9 +1158,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "午餐和晚餐",
     "es": "Almuerzo y cena",
     "it": "Pranzo e cena",
-    "tr": "Öğle ve akşam yemeği"
+    "tr": "Öğle ve akşam yemeği",
+    "he": "צהריים וערב"
   },
   "Coffee & Hot Beverages": {
+
     "fr": "Café & boissons chaudes",
     "de": "Kaffee & heiße Getränke",
     "hr": "Kava i topli napici",
@@ -992,9 +1171,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "咖啡和热饮",
     "es": "Café y bebidas calientes",
     "it": "Caffè e bevande calde",
-    "tr": "Kahve ve sıcak içecekler"
+    "tr": "Kahve ve sıcak içecekler",
+    "he": "קפה ומשקאות חמים"
   },
   "Coffee": {
+
     "fr": "Café",
     "de": "Kaffee",
     "hr": "Kava",
@@ -1003,9 +1184,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "咖啡",
     "es": "Café",
     "it": "Caffè",
-    "tr": "Kahve"
+    "tr": "Kahve",
+    "he": "קפה"
   },
   "Soft Drinks": {
+
     "fr": "Boissons gazeuses",
     "de": "Erfrischungsgetränke",
     "hr": "Gazirana pića",
@@ -1014,9 +1197,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "软饮料",
     "es": "Refrescos",
     "it": "Bibite",
-    "tr": "Gazlı içecekler"
+    "tr": "Gazlı içecekler",
+    "he": "משקאות קלים"
   },
   "Soft drinks": {
+
     "fr": "Boissons gazeuses",
     "de": "Erfrischungsgetränke",
     "hr": "Gazirana pića",
@@ -1025,9 +1210,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "软饮料",
     "es": "Refrescos",
     "it": "Bibite",
-    "tr": "Gazlı içecekler"
+    "tr": "Gazlı içecekler",
+    "he": "משקאות קלים"
   },
   "Fruit Juices": {
+
     "fr": "Jus de fruits",
     "de": "Fruchtsäfte",
     "hr": "Voćni sokovi",
@@ -1036,9 +1223,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "果汁",
     "es": "Zumos de fruta",
     "it": "Succhi di frutta",
-    "tr": "Meyve suları"
+    "tr": "Meyve suları",
+    "he": "מיצי פירות"
   },
   "Juices": {
+
     "fr": "Jus",
     "de": "Säfte",
     "hr": "Sokovi",
@@ -1047,9 +1236,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "果汁",
     "es": "Zumos",
     "it": "Succhi",
-    "tr": "Meyve suları"
+    "tr": "Meyve suları",
+    "he": "מיצים"
   },
   "Water": {
+
     "fr": "Eau",
     "de": "Wasser",
     "hr": "Voda",
@@ -1058,9 +1249,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "水",
     "es": "Agua",
     "it": "Acqua",
-    "tr": "Su"
+    "tr": "Su",
+    "he": "מים"
   },
   "Beer": {
+
     "fr": "Bière",
     "de": "Bier",
     "hr": "Pivo",
@@ -1069,9 +1262,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "啤酒",
     "es": "Cerveza",
     "it": "Birra",
-    "tr": "Bira"
+    "tr": "Bira",
+    "he": "בירה"
   },
   "Wines": {
+
     "fr": "Vins",
     "de": "Weine",
     "hr": "Vina",
@@ -1080,9 +1275,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "葡萄酒",
     "es": "Vinos",
     "it": "Vini",
-    "tr": "Şaraplar"
+    "tr": "Şaraplar",
+    "he": "יינות"
   },
   "Minibar": {
+
     "fr": "Minibar",
     "de": "Minibar",
     "hr": "Minibar",
@@ -1091,9 +1288,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "迷你吧",
     "es": "Minibar",
     "it": "Minibar",
-    "tr": "Minibar"
+    "tr": "Minibar",
+    "he": "מיניבר"
   },
   "Classic omelette": {
+
     "fr": "Omelette classique",
     "de": "Klassisches Omelett",
     "hr": "Klasična omleta",
@@ -1102,9 +1301,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "经典煎蛋卷",
     "es": "Tortilla clásica",
     "it": "Omelette classica",
-    "tr": "Klasik omlet"
+    "tr": "Klasik omlet",
+    "he": "חביתה קלאסית"
   },
   "Ham omelette": {
+
     "fr": "Omelette au jambon",
     "de": "Schinkenomelett",
     "hr": "Omleta sa šunkom",
@@ -1113,9 +1314,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "火腿煎蛋卷",
     "es": "Tortilla de jamón",
     "it": "Omelette al prosciutto",
-    "tr": "Jambonlu omlet"
+    "tr": "Jambonlu omlet",
+    "he": "חביתה עם חזיר"
   },
   "Fresh vegetable omelette": {
+
     "fr": "Omelette aux légumes frais",
     "de": "Omelett mit frischem Gemüse",
     "hr": "Omleta sa svježim povrćem",
@@ -1124,9 +1327,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "新鲜蔬菜煎蛋卷",
     "es": "Tortilla de verduras frescas",
     "it": "Omelette con verdure fresche",
-    "tr": "Taze sebzeli omlet"
+    "tr": "Taze sebzeli omlet",
+    "he": "חביתה עם ירקות טריים"
   },
   "Pancakes": {
+
     "fr": "Pancakes",
     "de": "Pfannkuchen",
     "hr": "Palačinke",
@@ -1135,9 +1340,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "松饼",
     "es": "Pancakes",
     "it": "Pancake",
-    "tr": "Pankek"
+    "tr": "Pankek",
+    "he": "פנקייקים"
   },
   "Llokuma (fried dough)": {
+
     "fr": "Llokuma (pâte frite)",
     "de": "Llokuma (Frittierteig)",
     "hr": "Llokuma (prženo tijesto)",
@@ -1146,9 +1353,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "洛克马（油炸面团）",
     "es": "Llokuma (masa frita)",
     "it": "Llokuma (impasto fritto)",
-    "tr": "Llokuma (kızarmış hamur)"
+    "tr": "Llokuma (kızarmış hamur)",
+    "he": "לוקומה (בצק מטוגן)"
   },
   "Soup of the day": {
+
     "fr": "Soupe du jour",
     "de": "Tagessuppe",
     "hr": "Juha dana",
@@ -1157,9 +1366,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "今日例汤",
     "es": "Sopa del día",
     "it": "Zuppa del giorno",
-    "tr": "Günün çorbası"
+    "tr": "Günün çorbası",
+    "he": "מרק היום"
   },
   "Chicken soup": {
+
     "fr": "Soupe de poulet",
     "de": "Hühnersuppe",
     "hr": "Pileća juha",
@@ -1168,9 +1379,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡汤",
     "es": "Sopa de pollo",
     "it": "Zuppa di pollo",
-    "tr": "Tavuk çorbası"
+    "tr": "Tavuk çorbası",
+    "he": "מרק עוף"
   },
   "Fish soup": {
+
     "fr": "Soupe de poisson",
     "de": "Fischsuppe",
     "hr": "Riblja juha",
@@ -1179,9 +1392,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鱼汤",
     "es": "Sopa de pescado",
     "it": "Zuppa di pesce",
-    "tr": "Balık çorbası"
+    "tr": "Balık çorbası",
+    "he": "מרק דגים"
   },
   "Mixed salad": {
+
     "fr": "Salade mixte",
     "de": "Gemischter Salat",
     "hr": "Miješana salata",
@@ -1190,9 +1405,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "混合沙拉",
     "es": "Ensalada mixta",
     "it": "Insalata mista",
-    "tr": "Karışık salata"
+    "tr": "Karışık salata",
+    "he": "סלט מעורב"
   },
   "Shopska salad": {
+
     "fr": "Salade shopska",
     "de": "Shopska-Salat",
     "hr": "Šopska salata",
@@ -1201,9 +1418,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "肖普斯卡沙拉",
     "es": "Ensalada shopska",
     "it": "Insalata shopska",
-    "tr": "Şopska salata"
+    "tr": "Şopska salata",
+    "he": "סלט שופסקה"
   },
   "Greek salad": {
+
     "fr": "Salade grecque",
     "de": "Griechischer Salat",
     "hr": "Grčka salata",
@@ -1212,9 +1431,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "希腊沙拉",
     "es": "Ensalada griega",
     "it": "Insalata greca",
-    "tr": "Yunan salatası"
+    "tr": "Yunan salatası",
+    "he": "סלט יווני"
   },
   "Caprese salad": {
+
     "fr": "Salade caprese",
     "de": "Caprese-Salat",
     "hr": "Caprese salata",
@@ -1223,9 +1444,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "卡布里沙拉",
     "es": "Ensalada caprese",
     "it": "Insalata caprese",
-    "tr": "Caprese salata"
+    "tr": "Caprese salata",
+    "he": "סלט קפרזה"
   },
   "House salad": {
+
     "fr": "Salade maison",
     "de": "Haussalat",
     "hr": "Kućna salata",
@@ -1234,9 +1457,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "招牌沙拉",
     "es": "Ensalada de la casa",
     "it": "Insalata della casa",
-    "tr": "Ev salatası"
+    "tr": "Ev salatası",
+    "he": "סלט הבית"
   },
   "Russian salad": {
+
     "fr": "Salade russe",
     "de": "Russischer Salat",
     "hr": "Ruska salata",
@@ -1245,9 +1470,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "俄式沙拉",
     "es": "Ensalada rusa",
     "it": "Insalata russa",
-    "tr": "Rus salatası"
+    "tr": "Rus salatası",
+    "he": "סלט רוסי"
   },
   "Arugula salad": {
+
     "fr": "Salade de roquette",
     "de": "Rucolasalat",
     "hr": "Rukola salata",
@@ -1256,9 +1483,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "芝麻菜沙拉",
     "es": "Ensalada de rúcula",
     "it": "Insalata di rucola",
-    "tr": "Roka salatası"
+    "tr": "Roka salatası",
+    "he": "סלט רוקט"
   },
   "Chicken Caesar salad": {
+
     "fr": "Salade César au poulet",
     "de": "Caesar-Salat mit Hähnchen",
     "hr": "Cezar salata s piletinom",
@@ -1267,9 +1496,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉凯撒沙拉",
     "es": "Ensalada César de pollo",
     "it": "Insalata Caesar con pollo",
-    "tr": "Tavuklu Sezar salata"
+    "tr": "Tavuklu Sezar salata",
+    "he": "סלט קיסר עם עוף"
   },
   "Buffalo salad": {
+
     "fr": "Salade Buffalo",
     "de": "Buffalo-Salat",
     "hr": "Buffalo salata",
@@ -1278,9 +1509,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "布法罗沙拉",
     "es": "Ensalada Buffalo",
     "it": "Insalata Buffalo",
-    "tr": "Buffalo salata"
+    "tr": "Buffalo salata",
+    "he": "סלט באפלו"
   },
   "Peppers with garlic": {
+
     "fr": "Poivrons à l'ail",
     "de": "Paprika mit Knoblauch",
     "hr": "Paprike s češnjakom",
@@ -1289,9 +1522,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "蒜香辣椒",
     "es": "Pimientos con ajo",
     "it": "Peperoni all'aglio",
-    "tr": "Sarımsaklı biber"
+    "tr": "Sarımsaklı biber",
+    "he": "פלפלים עם שום"
   },
   "Tzatziki": {
+
     "fr": "Tzatziki",
     "de": "Tzatziki",
     "hr": "Tarator",
@@ -1300,9 +1535,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "塔塔西基",
     "es": "Tzatziki",
     "it": "Tzatziki",
-    "tr": "Cacık"
+    "tr": "Cacık",
+    "he": "צזיקי"
   },
   "Olives": {
+
     "fr": "Olives",
     "de": "Oliven",
     "hr": "Masline",
@@ -1311,9 +1548,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "橄榄",
     "es": "Aceitunas",
     "it": "Olive",
-    "tr": "Zeytin"
+    "tr": "Zeytin",
+    "he": "זיתים"
   },
   "Classic bruschetta": {
+
     "fr": "Bruschetta classique",
     "de": "Klassische Bruschetta",
     "hr": "Klasična bruschetta",
@@ -1322,9 +1561,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "经典意式烤面包",
     "es": "Bruschetta clásica",
     "it": "Bruschetta classica",
-    "tr": "Klasik bruschetta"
+    "tr": "Klasik bruschetta",
+    "he": "ברוסקטה קלאסית"
   },
   "Tuna bruschetta": {
+
     "fr": "Bruschetta au thon",
     "de": "Thunfisch-Bruschetta",
     "hr": "Bruschetta s tunom",
@@ -1333,9 +1574,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "金枪鱼烤面包",
     "es": "Bruschetta de atún",
     "it": "Bruschetta al tonno",
-    "tr": "Ton balıklı bruschetta"
+    "tr": "Ton balıklı bruschetta",
+    "he": "ברוסקטה עם טונה"
   },
   "Smoked salmon bruschetta": {
+
     "fr": "Bruschetta au saumon fumé",
     "de": "Räucherlachs-Bruschetta",
     "hr": "Bruschetta s dimljenim lososom",
@@ -1344,9 +1587,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烟熏三文鱼烤面包",
     "es": "Bruschetta de salmón ahumado",
     "it": "Bruschetta al salmone affumicato",
-    "tr": "Füme somonlu bruschetta"
+    "tr": "Füme somonlu bruschetta",
+    "he": "ברוסקטה עם סלמון מעושן"
   },
   "Mixed pickles": {
+
     "fr": "Cornichons mixtes",
     "de": "Gemischtes Sauergemüse",
     "hr": "Miješani turšija",
@@ -1355,9 +1600,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "什锦泡菜",
     "es": "Encurtidos mixtos",
     "it": "Sottaceti misti",
-    "tr": "Karışık turşu"
+    "tr": "Karışık turşu",
+    "he": "חמוצים מעורבים"
   },
   "White cheese": {
+
     "fr": "Fromage blanc",
     "de": "Weißkäse",
     "hr": "Bijeli sir",
@@ -1366,9 +1613,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "白奶酪",
     "es": "Queso blanco",
     "it": "Formaggio fresco",
-    "tr": "Beyaz peynir"
+    "tr": "Beyaz peynir",
+    "he": "גבינה לבנה"
   },
   "Sharri cheese": {
+
     "fr": "Fromage Sharri",
     "de": "Sharri-Käse",
     "hr": "Sharri sir",
@@ -1377,9 +1626,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "沙里奶酪",
     "es": "Queso Sharri",
     "it": "Formaggio Sharri",
-    "tr": "Sharri peyniri"
+    "tr": "Sharri peyniri",
+    "he": "גבינת שארי"
   },
   "Mixed cheeses": {
+
     "fr": "Assortiment de fromages",
     "de": "Käsemischung",
     "hr": "Miješani sirevi",
@@ -1388,9 +1639,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "混合奶酪",
     "es": "Quesos mixtos",
     "it": "Formaggi misti",
-    "tr": "Karışık peynirler"
+    "tr": "Karışık peynirler",
+    "he": "מבחר גבינות"
   },
   "Goat cheese": {
+
     "fr": "Fromage de chèvre",
     "de": "Ziegenkäse",
     "hr": "Kozji sir",
@@ -1399,9 +1652,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "山羊奶酪",
     "es": "Queso de cabra",
     "it": "Formaggio di capra",
-    "tr": "Keçi peyniri"
+    "tr": "Keçi peyniri",
+    "he": "גבינת עזים"
   },
   "Mixed appetizer (2 people)": {
+
     "fr": "Assortiment d'entrées (2 pers.)",
     "de": "Gemischte Vorspeise (2 Pers.)",
     "hr": "Miješano predjelo (2 osobe)",
@@ -1410,9 +1665,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "混合前菜（2人）",
     "es": "Entrante mixto (2 personas)",
     "it": "Antipasto misto (2 persone)",
-    "tr": "Karışık mezeler (2 kişilik)"
+    "tr": "Karışık mezeler (2 kişilik)",
+    "he": "מנת פתיחה מעורבת (לשניים)"
   },
   "Fried kashkaval (1 pc)": {
+
     "fr": "Kachkaval frit (1 pc)",
     "de": "Frittierter Kashkaval (1 Stk.)",
     "hr": "Prženi kačkavalj (1 kom)",
@@ -1421,9 +1678,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "炸卡什卡瓦尔奶酪（1块）",
     "es": "Kashkaval frito (1 ud.)",
     "it": "Kashkaval fritto (1 pz)",
-    "tr": "Kızarmış kaşkaval (1 adet)"
+    "tr": "Kızarmış kaşkaval (1 adet)",
+    "he": "קשקבל מטוגן (1 יח׳)"
   },
   "Baked potatoes": {
+
     "fr": "Pommes de terre au four",
     "de": "Ofenkartoffeln",
     "hr": "Pečeni krumpir",
@@ -1432,9 +1691,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤土豆",
     "es": "Patatas al horno",
     "it": "Patate al forno",
-    "tr": "Fırın patates"
+    "tr": "Fırın patates",
+    "he": "תפוחי אדמה אפויים"
   },
   "French fries": {
+
     "fr": "Frites",
     "de": "Pommes frites",
     "hr": "Pomfrit",
@@ -1443,9 +1704,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "薯条",
     "es": "Patatas fritas",
     "it": "Patatine fritte",
-    "tr": "Patates kızartması"
+    "tr": "Patates kızartması",
+    "he": "צ׳יפס"
   },
   "Bread pizza": {
+
     "fr": "Pizza pain",
     "de": "Brotpizza",
     "hr": "Pizza kruh",
@@ -1454,9 +1717,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "面包披萨",
     "es": "Pizza de pan",
     "it": "Pizza pane",
-    "tr": "Ekmek pizza"
+    "tr": "Ekmek pizza",
+    "he": "פיצת לחם"
   },
   "Cheese fries": {
+
     "fr": "Frites au fromage",
     "de": "Käse-Pommes",
     "hr": "Pomfrit sa sirom",
@@ -1465,9 +1730,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "芝士薯条",
     "es": "Patatas con queso",
     "it": "Patatine al formaggio",
-    "tr": "Peynirli patates"
+    "tr": "Peynirli patates",
+    "he": "צ׳יפס עם גבינה"
   },
   "Pogacha": {
+
     "fr": "Pogacha",
     "de": "Pogacha",
     "hr": "Pogača",
@@ -1476,9 +1743,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "波加查面包",
     "es": "Pogacha",
     "it": "Pogacha",
-    "tr": "Poğaça"
+    "tr": "Poğaça",
+    "he": "פוגאצ׳ה"
   },
   "Flija": {
+
     "fr": "Flija",
     "de": "Flija",
     "hr": "Flija",
@@ -1487,9 +1756,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "弗利亚",
     "es": "Flija",
     "it": "Flija",
-    "tr": "Flija"
+    "tr": "Flija",
+    "he": "פליה"
   },
   "Fried mushrooms": {
+
     "fr": "Champignons frits",
     "de": "Frittierte Champignons",
     "hr": "Pržene gljive",
@@ -1498,9 +1769,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "炸蘑菇",
     "es": "Champiñones fritos",
     "it": "Funghi fritti",
-    "tr": "Kızarmış mantar"
+    "tr": "Kızarmış mantar",
+    "he": "פטריות מטוגנות"
   },
   "Peppers with curd cheese": {
+
     "fr": "Poivrons au fromage frais",
     "de": "Paprika mit Quark",
     "hr": "Paprike s urdom",
@@ -1509,9 +1782,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "凝乳奶酪辣椒",
     "es": "Pimientos con cuajada",
     "it": "Peperoni con ricotta",
-    "tr": "Lor peynirli biber"
+    "tr": "Lor peynirli biber",
+    "he": "פלפלים עם גבינת קורד"
   },
   "Fried vegetables": {
+
     "fr": "Légumes frits",
     "de": "Frittiertes Gemüse",
     "hr": "Prženo povrće",
@@ -1520,9 +1795,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "炸蔬菜",
     "es": "Verduras fritas",
     "it": "Verdure fritte",
-    "tr": "Kızarmış sebze"
+    "tr": "Kızarmış sebze",
+    "he": "ירקות מטוגנים"
   },
   "Baked cheese": {
+
     "fr": "Fromage au four",
     "de": "Ofenkäse",
     "hr": "Pečeni sir",
@@ -1531,9 +1808,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤奶酪",
     "es": "Queso al horno",
     "it": "Formaggio al forno",
-    "tr": "Fırın peyniri"
+    "tr": "Fırın peyniri",
+    "he": "גבינה אפויה"
   },
   "Baked mushrooms": {
+
     "fr": "Champignons au four",
     "de": "Ofenchampignons",
     "hr": "Pečene gljive",
@@ -1542,9 +1821,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤蘑菇",
     "es": "Champiñones al horno",
     "it": "Funghi al forno",
-    "tr": "Fırın mantar"
+    "tr": "Fırın mantar",
+    "he": "פטריות אפויות"
   },
   "2 people": {
+
     "fr": "2 personnes",
     "de": "2 Personen",
     "hr": "2 osobe",
@@ -1553,9 +1834,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "2人",
     "es": "2 personas",
     "it": "2 persone",
-    "tr": "2 kişi"
+    "tr": "2 kişi",
+    "he": "2 אנשים"
   },
   "4 people": {
+
     "fr": "4 personnes",
     "de": "4 Personen",
     "hr": "4 osobe",
@@ -1564,9 +1847,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "4人",
     "es": "4 personas",
     "it": "4 persone",
-    "tr": "4 kişi"
+    "tr": "4 kişi",
+    "he": "4 אנשים"
   },
   "Margherita pizza": {
+
     "fr": "Pizza Margherita",
     "de": "Pizza Margherita",
     "hr": "Pizza Margherita",
@@ -1575,9 +1860,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "玛格丽特披萨",
     "es": "Pizza Margherita",
     "it": "Pizza Margherita",
-    "tr": "Margarita pizza"
+    "tr": "Margarita pizza",
+    "he": "פיצה מרגריטה"
   },
   "Fungi pizza": {
+
     "fr": "Pizza funghi",
     "de": "Pilz-Pizza",
     "hr": "Pizza s gljivama",
@@ -1586,9 +1873,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "蘑菇披萨",
     "es": "Pizza de champiñones",
     "it": "Pizza funghi",
-    "tr": "Mantarlı pizza"
+    "tr": "Mantarlı pizza",
+    "he": "פיצה פונגי"
   },
   "Ham pizza": {
+
     "fr": "Pizza au jambon",
     "de": "Schinken-Pizza",
     "hr": "Pizza sa šunkom",
@@ -1597,9 +1886,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "火腿披萨",
     "es": "Pizza de jamón",
     "it": "Pizza al prosciutto",
-    "tr": "Jambonlu pizza"
+    "tr": "Jambonlu pizza",
+    "he": "פיצה עם חזיר"
   },
   "Vegetarian pizza": {
+
     "fr": "Pizza végétarienne",
     "de": "Vegetarische Pizza",
     "hr": "Vegetarijanska pizza",
@@ -1608,9 +1899,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "素食披萨",
     "es": "Pizza vegetariana",
     "it": "Pizza vegetariana",
-    "tr": "Vejetaryen pizza"
+    "tr": "Vejetaryen pizza",
+    "he": "פיצה צמחונית"
   },
   "Tuna pizza": {
+
     "fr": "Pizza au thon",
     "de": "Thunfisch-Pizza",
     "hr": "Pizza s tunom",
@@ -1619,9 +1912,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "金枪鱼披萨",
     "es": "Pizza de atún",
     "it": "Pizza al tonno",
-    "tr": "Ton balıklı pizza"
+    "tr": "Ton balıklı pizza",
+    "he": "פיצה טונה"
   },
   "House pizza": {
+
     "fr": "Pizza maison",
     "de": "Haus-Pizza",
     "hr": "Kućna pizza",
@@ -1630,9 +1925,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "招牌披萨",
     "es": "Pizza de la casa",
     "it": "Pizza della casa",
-    "tr": "Ev pizza"
+    "tr": "Ev pizza",
+    "he": "פיצת הבית"
   },
   "Frutti di Mare pizza": {
+
     "fr": "Pizza Frutti di Mare",
     "de": "Frutti-di-Mare-Pizza",
     "hr": "Pizza Frutti di Mare",
@@ -1641,9 +1938,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜披萨",
     "es": "Pizza Frutti di Mare",
     "it": "Pizza Frutti di Mare",
-    "tr": "Frutti di Mare pizza"
+    "tr": "Frutti di Mare pizza",
+    "he": "פיצה פירות ים"
   },
   "Pasta Napoli": {
+
     "fr": "Pâtes Napoli",
     "de": "Pasta Napoli",
     "hr": "Tjestenina Napoli",
@@ -1652,9 +1951,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "那不勒斯意面",
     "es": "Pasta Napoli",
     "it": "Pasta Napoli",
-    "tr": "Napoli makarna"
+    "tr": "Napoli makarna",
+    "he": "פסטה נאפולי"
   },
   "Pasta Bolognese": {
+
     "fr": "Pâtes boloñaise",
     "de": "Pasta Bolognese",
     "hr": "Tjestenina Bolonjez",
@@ -1663,9 +1964,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "肉酱意面",
     "es": "Pasta boloñesa",
     "it": "Pasta alla bolognese",
-    "tr": "Bolonez makarna"
+    "tr": "Bolonez makarna",
+    "he": "פסטה בולונז"
   },
   "Pasta Carbonara": {
+
     "fr": "Pâtes carbonara",
     "de": "Pasta Carbonara",
     "hr": "Tjestenina Carbonara",
@@ -1674,9 +1977,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "培根蛋面",
     "es": "Pasta carbonara",
     "it": "Pasta carbonara",
-    "tr": "Karbonara makarna"
+    "tr": "Karbonara makarna",
+    "he": "פסטה קרבונרה"
   },
   "Pasta with prawns": {
+
     "fr": "Pâtes aux crevettes",
     "de": "Pasta mit Garnelen",
     "hr": "Tjestenina s kozicama",
@@ -1685,9 +1990,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "虾意面",
     "es": "Pasta con gambas",
     "it": "Pasta con gamberi",
-    "tr": "Karidesli makarna"
+    "tr": "Karidesli makarna",
+    "he": "פסטה עם שרימפס"
   },
   "Four-cheese pasta": {
+
     "fr": "Pâtes aux quatre fromages",
     "de": "Vier-Käse-Pasta",
     "hr": "Tjestenina s četiri sira",
@@ -1696,9 +2003,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "四芝士意面",
     "es": "Pasta cuatro quesos",
     "it": "Pasta ai quattro formaggi",
-    "tr": "Dört peynirli makarna"
+    "tr": "Dört peynirli makarna",
+    "he": "פסטה ארבע גבינות"
   },
   "Pasta with calamari": {
+
     "fr": "Pâtes aux calamars",
     "de": "Pasta mit Calamari",
     "hr": "Tjestenina s lignjama",
@@ -1707,9 +2016,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鱿鱼意面",
     "es": "Pasta con calamares",
     "it": "Pasta con calamari",
-    "tr": "Kalamarlı makarna"
+    "tr": "Kalamarlı makarna",
+    "he": "פסטה עם קלמרי"
   },
   "Pasta with scampi": {
+
     "fr": "Pâtes aux scampi",
     "de": "Pasta mit Scampi",
     "hr": "Tjestenina sa škampima",
@@ -1718,9 +2029,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "大虾意面",
     "es": "Pasta con scampi",
     "it": "Pasta con scampi",
-    "tr": "Scampili makarna"
+    "tr": "Scampili makarna",
+    "he": "פסטה עם סקמפי"
   },
   "Pasta Frutti di Mare": {
+
     "fr": "Pâtes Frutti di Mare",
     "de": "Pasta Frutti di Mare",
     "hr": "Tjestenina Frutti di Mare",
@@ -1729,9 +2042,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜意面",
     "es": "Pasta Frutti di Mare",
     "it": "Pasta Frutti di Mare",
-    "tr": "Frutti di Mare makarna"
+    "tr": "Frutti di Mare makarna",
+    "he": "פסטה פירות ים"
   },
   "Prawn & truffle pasta": {
+
     "fr": "Pâtes crevettes & truffe",
     "de": "Garnelen-Trüffel-Pasta",
     "hr": "Tjestenina s kozicama i tartufom",
@@ -1740,9 +2055,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "虾与松露意面",
     "es": "Pasta de gambas y trufa",
     "it": "Pasta gamberi e tartufo",
-    "tr": "Karides ve trüflü makarna"
+    "tr": "Karides ve trüflü makarna",
+    "he": "פסטה שרימפס וטרפל"
   },
   "Chicken & vegetable risotto": {
+
     "fr": "Risotto poulet & légumes",
     "de": "Hähnchen-Gemüse-Risotto",
     "hr": "Rižoto s piletinom i povrćem",
@@ -1751,9 +2068,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉蔬菜烩饭",
     "es": "Risotto de pollo y verduras",
     "it": "Risotto pollo e verdure",
-    "tr": "Tavuklu sebzeli risotto"
+    "tr": "Tavuklu sebzeli risotto",
+    "he": "ריזוטו עוף וירקות"
   },
   "Mushroom risotto": {
+
     "fr": "Risotto aux champignons",
     "de": "Champignon-Risotto",
     "hr": "Rižoto s gljivama",
@@ -1762,9 +2081,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "蘑菇烩饭",
     "es": "Risotto de champiñones",
     "it": "Risotto ai funghi",
-    "tr": "Mantarlı risotto"
+    "tr": "Mantarlı risotto",
+    "he": "ריזוטו פטריות"
   },
   "Prawn risotto": {
+
     "fr": "Risotto aux crevettes",
     "de": "Garnelen-Risotto",
     "hr": "Rižoto s kozicama",
@@ -1773,9 +2094,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "虾烩饭",
     "es": "Risotto de gambas",
     "it": "Risotto ai gamberi",
-    "tr": "Karidesli risotto"
+    "tr": "Karidesli risotto",
+    "he": "ריזוטו שרימפס"
   },
   "Frutti di Mare risotto": {
+
     "fr": "Risotto Frutti di Mare",
     "de": "Frutti-di-Mare-Risotto",
     "hr": "Rižoto Frutti di Mare",
@@ -1784,9 +2107,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜烩饭",
     "es": "Risotto Frutti di Mare",
     "it": "Risotto Frutti di Mare",
-    "tr": "Frutti di Mare risotto"
+    "tr": "Frutti di Mare risotto",
+    "he": "ריזוטו פירות ים"
   },
   "Sharri pljeskavica": {
+
     "fr": "Pljeskavica Sharri",
     "de": "Sharri-Pljeskavica",
     "hr": "Sharri pljeskavica",
@@ -1795,9 +2120,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "沙里肉饼",
     "es": "Pljeskavica Sharri",
     "it": "Pljeskavica Sharri",
-    "tr": "Sharri pljeskavica"
+    "tr": "Sharri pljeskavica",
+    "he": "פלסקוויצה שארי"
   },
   "Chicken fillet": {
+
     "fr": "Filet de poulet",
     "de": "Hähnchenfilet",
     "hr": "Pileći file",
@@ -1806,9 +2133,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡柳",
     "es": "Filete de pollo",
     "it": "Filetto di pollo",
-    "tr": "Tavuk fileto"
+    "tr": "Tavuk fileto",
+    "he": "פילה עוף"
   },
   "Veal chop": {
+
     "fr": "Côte de veau",
     "de": "Kalbskotelett",
     "hr": "Teleća kotleta",
@@ -1817,9 +2146,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小牛排",
     "es": "Chuletón de ternera",
     "it": "Costoletta di vitello",
-    "tr": "Dana pirzola"
+    "tr": "Dana pirzola",
+    "he": "צלע עגל"
   },
   "Prime Ribeye": {
+
     "fr": "Prime Ribeye",
     "de": "Prime Ribeye",
     "hr": "Prime Ribeye",
@@ -1828,9 +2159,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "顶级肋眼牛排",
     "es": "Prime Ribeye",
     "it": "Prime Ribeye",
-    "tr": "Prime Ribeye"
+    "tr": "Prime Ribeye",
+    "he": "ריבאיי פריים"
   },
   "New York strip": {
+
     "fr": "New York strip",
     "de": "New York Strip",
     "hr": "New York strip",
@@ -1839,9 +2172,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "纽约客牛排",
     "es": "New York strip",
     "it": "New York strip",
-    "tr": "New York strip"
+    "tr": "New York strip",
+    "he": "ניו יורק סטריפ"
   },
   "Meat combination": {
+
     "fr": "Assortiment de viandes",
     "de": "Fleischkombination",
     "hr": "Kombinacija mesa",
@@ -1850,9 +2185,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "肉类拼盘",
     "es": "Combinado de carnes",
     "it": "Combinazione di carni",
-    "tr": "Et karışımı"
+    "tr": "Et karışımı",
+    "he": "מבחר בשרים"
   },
   "Veal meat": {
+
     "fr": "Viande de veau",
     "de": "Kalbfleisch",
     "hr": "Teleće meso",
@@ -1861,9 +2198,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小牛肉",
     "es": "Carne de ternera",
     "it": "Carne di vitello",
-    "tr": "Dana eti"
+    "tr": "Dana eti",
+    "he": "בשר עגל"
   },
   "Filet mignon": {
+
     "fr": "Filet mignon",
     "de": "Filet Mignon",
     "hr": "File mignon",
@@ -1872,9 +2211,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "菲力牛排",
     "es": "Filet mignon",
     "it": "Filetto",
-    "tr": "Filet mignon"
+    "tr": "Filet mignon",
+    "he": "פילה מיניון"
   },
   "Veal medallions": {
+
     "fr": "Médaillons de veau",
     "de": "Kalbsmedaillons",
     "hr": "Teleći medaljoni",
@@ -1883,9 +2224,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小牛柳",
     "es": "Medallones de ternera",
     "it": "Medaglioni di vitello",
-    "tr": "Dana madalyon"
+    "tr": "Dana madalyon",
+    "he": "מדליוני עגל"
   },
   "Filet mignon with tarragon": {
+
     "fr": "Filet mignon à l'estragon",
     "de": "Filet Mignon mit Estragon",
     "hr": "File mignon s taragonom",
@@ -1894,9 +2237,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "龙蒿菲力",
     "es": "Filet mignon con estragón",
     "it": "Filetto all'estragone",
-    "tr": "Tarhunlu filet mignon"
+    "tr": "Tarhunlu filet mignon",
+    "he": "פילה מיניון עם טרגון"
   },
   "House meatballs": {
+
     "fr": "Boulettes maison",
     "de": "Haus-Frikadellen",
     "hr": "Kućne ćufte",
@@ -1905,9 +2250,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "招牌肉丸",
     "es": "Albóndigas de la casa",
     "it": "Polpette della casa",
-    "tr": "Ev köftesi"
+    "tr": "Ev köftesi",
+    "he": "קציצות הבית"
   },
   "Meatballs with gravy": {
+
     "fr": "Boulettes à la sauce",
     "de": "Frikadellen mit Soße",
     "hr": "Ćufte s umakom",
@@ -1916,9 +2263,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "浇汁肉丸",
     "es": "Albóndigas con salsa",
     "it": "Polpette al sugo",
-    "tr": "Soslu köfte"
+    "tr": "Soslu köfte",
+    "he": "קציצות ברוטב"
   },
   "Veal muscles": {
+
     "fr": "Muscles de veau",
     "de": "Kalbsmuskeln",
     "hr": "Teleći mišići",
@@ -1927,9 +2276,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小牛腱",
     "es": "Músculos de ternera",
     "it": "Muscoli di vitello",
-    "tr": "Dana kas"
+    "tr": "Dana kas",
+    "he": "שרירי עגל"
   },
   "Veal ribs": {
+
     "fr": "Côtes de veau",
     "de": "Kalbsrippen",
     "hr": "Teleća rebra",
@@ -1938,9 +2289,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小牛肋",
     "es": "Costillas de ternera",
     "it": "Costine di vitello",
-    "tr": "Dana kaburga"
+    "tr": "Dana kaburga",
+    "he": "צלעות עגל"
   },
   "Oven beef steak": {
+
     "fr": "Steak de bœuf au four",
     "de": "Ofen-Rindersteak",
     "hr": "Goveđi steak iz pećnice",
@@ -1949,9 +2302,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤箱牛排",
     "es": "Bistec al horno",
     "it": "Bistecca al forno",
-    "tr": "Fırın biftek"
+    "tr": "Fırın biftek",
+    "he": "סטייק בקר בתנור"
   },
   "Lamb meat": {
+
     "fr": "Viande d'agneau",
     "de": "Lammfleisch",
     "hr": "Janjeće meso",
@@ -1960,9 +2315,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "羊肉",
     "es": "Carne de cordero",
     "it": "Carne di agnello",
-    "tr": "Kuzu eti"
+    "tr": "Kuzu eti",
+    "he": "בשר כבש"
   },
   "Kid goat meat": {
+
     "fr": "Viande de chevreau",
     "de": "Zickleinfleisch",
     "hr": "Jareće meso",
@@ -1971,9 +2328,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小山羊肉",
     "es": "Carne de cabrito",
     "it": "Carne di capretto",
-    "tr": "Oğlak eti"
+    "tr": "Oğlak eti",
+    "he": "בשר גדי"
   },
   "Clay-pot chicken": {
+
     "fr": "Poulet en pot d'argile",
     "de": "Hähnchen im Tontopf",
     "hr": "Piletina u zemljanom loncu",
@@ -1982,9 +2341,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "砂锅鸡",
     "es": "Pollo en cazuela de barro",
     "it": "Pollo in tegame di terracotta",
-    "tr": "Güveçte tavuk"
+    "tr": "Güveçte tavuk",
+    "he": "עוף בסיר חרס"
   },
   "Chicken schnitzel": {
+
     "fr": "Schnitzel de poulet",
     "de": "Hähnchenschnitzel",
     "hr": "Pileći šnicl",
@@ -1993,9 +2354,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉炸排",
     "es": "Schnitzel de pollo",
     "it": "Cotoletta di pollo",
-    "tr": "Tavuk şinitzel"
+    "tr": "Tavuk şinitzel",
+    "he": "שניצל עוף"
   },
   "Chicken Skenderbeg": {
+
     "fr": "Skenderbeg de poulet",
     "de": "Hähnchen-Skenderbeg",
     "hr": "Pileći Skenderbeg",
@@ -2004,9 +2367,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉斯坎德培",
     "es": "Skenderbeg de pollo",
     "it": "Skenderbeg di pollo",
-    "tr": "Tavuk Skenderbeg"
+    "tr": "Tavuk Skenderbeg",
+    "he": "עוף סקנדרבג"
   },
   "Skenderbeg": {
+
     "fr": "Skenderbeg",
     "de": "Skenderbeg",
     "hr": "Skenderbeg",
@@ -2015,9 +2380,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "斯坎德培",
     "es": "Skenderbeg",
     "it": "Skenderbeg",
-    "tr": "Skenderbeg"
+    "tr": "Skenderbeg",
+    "he": "סקנדרבג"
   },
   "Wiener schnitzel": {
+
     "fr": "Schnitzel viennois",
     "de": "Wiener Schnitzel",
     "hr": "Bečki šnicl",
@@ -2026,9 +2393,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "维也纳炸排",
     "es": "Schnitzel vienés",
     "it": "Cotoletta alla milanese",
-    "tr": "Viyana şinitzeli"
+    "tr": "Viyana şinitzeli",
+    "he": "שניצל וינאי"
   },
   "Seafood salad": {
+
     "fr": "Salade de fruits de mer",
     "de": "Meeresfrüchtesalat",
     "hr": "Salata od morskih plodova",
@@ -2037,9 +2406,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜沙拉",
     "es": "Ensalada de mariscos",
     "it": "Insalata di mare",
-    "tr": "Deniz mahsulü salata"
+    "tr": "Deniz mahsulü salata",
+    "he": "סלט פירות ים"
   },
   "Sea bass or sea bream carpaccio": {
+
     "fr": "Carpaccio de bar ou dorade",
     "de": "Karpaccio von Wolfsbarsch oder Dorade",
     "hr": "Karpaccio od lubina ili orade",
@@ -2048,9 +2419,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鲈鱼或鲷鱼生食",
     "es": "Carpaccio de lubina o dorada",
     "it": "Carpaccio di branzino o orata",
-    "tr": "Levrek veya çipura carpaccio"
+    "tr": "Levrek veya çipura carpaccio",
+    "he": "קרפצ׳יו לברק או דניס"
   },
   "Crudo mix (2 people)": {
+
     "fr": "Crudo mix (2 pers.)",
     "de": "Crudo-Mix (2 Pers.)",
     "hr": "Crudo mix (2 osobe)",
@@ -2059,9 +2432,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "生海鲜拼盘（2人）",
     "es": "Crudo mix (2 personas)",
     "it": "Crudo mix (2 persone)",
-    "tr": "Crudo mix (2 kişi)"
+    "tr": "Crudo mix (2 kişi)",
+    "he": "מיקס קרודו (לשניים)"
   },
   "Fish croquettes": {
+
     "fr": "Croquettes de poisson",
     "de": "Fischkroketten",
     "hr": "Riblje kroketе",
@@ -2070,9 +2445,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鱼肉可乐饼",
     "es": "Croquetas de pescado",
     "it": "Crocchette di pesce",
-    "tr": "Balık kroket"
+    "tr": "Balık kroket",
+    "he": "קרוקטים של דג"
   },
   "Mussels": {
+
     "fr": "Moules",
     "de": "Miesmuscheln",
     "hr": "Dagnje",
@@ -2081,9 +2458,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "贻贝",
     "es": "Mejillones",
     "it": "Cozze",
-    "tr": "Midye"
+    "tr": "Midye",
+    "he": "מולים"
   },
   "Prawns in cognac sauce": {
+
     "fr": "Crevettes sauce cognac",
     "de": "Garnelen in Cognacsoße",
     "hr": "Kozice u umaku od konjaka",
@@ -2092,9 +2471,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "干邑酱虾",
     "es": "Gambas en salsa de coñac",
     "it": "Gamberi al cognac",
-    "tr": "Konyak soslu karides"
+    "tr": "Konyak soslu karides",
+    "he": "שרימפס ברוטב קוניאק"
   },
   "Trout": {
+
     "fr": "Truite",
     "de": "Forelle",
     "hr": "Pastrva",
@@ -2103,9 +2484,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鳟鱼",
     "es": "Trucha",
     "it": "Trota",
-    "tr": "Alabalık"
+    "tr": "Alabalık",
+    "he": "פורל"
   },
   "Calamari": {
+
     "fr": "Calamars",
     "de": "Calamari",
     "hr": "Lignje",
@@ -2114,9 +2497,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鱿鱼",
     "es": "Calamares",
     "it": "Calamari",
-    "tr": "Kalamar"
+    "tr": "Kalamar",
+    "he": "קלמרי"
   },
   "Prawns": {
+
     "fr": "Crevettes",
     "de": "Garnelen",
     "hr": "Kozice",
@@ -2125,9 +2510,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "虾",
     "es": "Gambas",
     "it": "Gamberi",
-    "tr": "Karides"
+    "tr": "Karides",
+    "he": "שרימפס"
   },
   "Sea bass": {
+
     "fr": "Bar",
     "de": "Wolfsbarsch",
     "hr": "Lubina",
@@ -2136,9 +2523,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鲈鱼",
     "es": "Lubina",
     "it": "Branzino",
-    "tr": "Levrek"
+    "tr": "Levrek",
+    "he": "לברק"
   },
   "Sea bream": {
+
     "fr": "Dorade",
     "de": "Dorade",
     "hr": "Orada",
@@ -2147,9 +2536,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鲷鱼",
     "es": "Dorada",
     "it": "Orata",
-    "tr": "Çipura"
+    "tr": "Çipura",
+    "he": "דניס"
   },
   "Tuna steak": {
+
     "fr": "Steak de thon",
     "de": "Thunfischsteak",
     "hr": "Tuna steak",
@@ -2158,9 +2549,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "金枪鱼排",
     "es": "Filete de atún",
     "it": "Bistecca di tonno",
-    "tr": "Ton balığı steak"
+    "tr": "Ton balığı steak",
+    "he": "סטייק טונה"
   },
   "Baked salmon": {
+
     "fr": "Saumon au four",
     "de": "Ofenlachs",
     "hr": "Pečeni losos",
@@ -2169,9 +2562,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤三文鱼",
     "es": "Salmón al horno",
     "it": "Salmone al forno",
-    "tr": "Fırın somon"
+    "tr": "Fırın somon",
+    "he": "סלמון אפוי"
   },
   "Salmon": {
+
     "fr": "Saumon",
     "de": "Lachs",
     "hr": "Losos",
@@ -2180,9 +2575,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "三文鱼",
     "es": "Salmón",
     "it": "Salmone",
-    "tr": "Somon"
+    "tr": "Somon",
+    "he": "סלמון"
   },
   "Grilled seafood mix": {
+
     "fr": "Mix fruits de mer grillés",
     "de": "Gegrillte Meeresfrüchte-Mix",
     "hr": "Roštilj mix morskih plodova",
@@ -2191,9 +2588,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "烤海鲜拼盘",
     "es": "Mix de mariscos a la parrilla",
     "it": "Mix di mare alla griglia",
-    "tr": "Izgara deniz ürünü karışımı"
+    "tr": "Izgara deniz ürünü karışımı",
+    "he": "מיקס פירות ים בגריל"
   },
   "Cuttlefish": {
+
     "fr": "Seiche",
     "de": "Tintenfisch",
     "hr": "Sipa",
@@ -2202,9 +2601,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "墨鱼",
     "es": "Sepia",
     "it": "Seppia",
-    "tr": "Mürekkep balığı"
+    "tr": "Mürekkep balığı",
+    "he": "דיונון"
   },
   "Seafood casserole (2–4 people)": {
+
     "fr": "Casserole de fruits de mer (2–4 pers.)",
     "de": "Meeresfrüchte-Auflauf (2–4 Pers.)",
     "hr": "Tava morskih plodova (2–4 osobe)",
@@ -2213,9 +2614,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜砂锅（2–4人）",
     "es": "Cazuela de mariscos (2–4 personas)",
     "it": "Tegame di mare (2–4 persone)",
-    "tr": "Deniz ürünü güveç (2–4 kişi)"
+    "tr": "Deniz ürünü güveç (2–4 kişi)",
+    "he": "קדרת פירות ים (2–4 אנשים)"
   },
   "Wild fish": {
+
     "fr": "Poisson sauvage",
     "de": "Wildfangfisch",
     "hr": "Divlja riba",
@@ -2224,9 +2627,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "野生鱼",
     "es": "Pescado salvaje",
     "it": "Pesce selvatico",
-    "tr": "Yabani balık"
+    "tr": "Yabani balık",
+    "he": "דג בר"
   },
   "Tres leches": {
+
     "fr": "Tres leches",
     "de": "Tres Leches",
     "hr": "Trije mlijeka",
@@ -2235,9 +2640,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "三奶蛋糕",
     "es": "Tres leches",
     "it": "Tres leches",
-    "tr": "Tres leches"
+    "tr": "Tres leches",
+    "he": "טרס לצ׳ס"
   },
   "Ice cream": {
+
     "fr": "Glace",
     "de": "Eis",
     "hr": "Sladoled",
@@ -2246,9 +2653,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冰淇淋",
     "es": "Helado",
     "it": "Gelato",
-    "tr": "Dondurma"
+    "tr": "Dondurma",
+    "he": "גלידה"
   },
   "Cheesecake": {
+
     "fr": "Cheesecake",
     "de": "Käsekuchen",
     "hr": "Cheesecake",
@@ -2257,9 +2666,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "芝士蛋糕",
     "es": "Tarta de queso",
     "it": "Cheesecake",
-    "tr": "Cheesecake"
+    "tr": "Cheesecake",
+    "he": "עוגת גבינה"
   },
   "Soufflé": {
+
     "fr": "Soufflé",
     "de": "Soufflé",
     "hr": "Soufflé",
@@ -2268,9 +2679,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "舒芙蕾",
     "es": "Soufflé",
     "it": "Soufflé",
-    "tr": "Sufle"
+    "tr": "Sufle",
+    "he": "סופלה"
   },
   "Fruit salad with ice cream": {
+
     "fr": "Salade de fruits avec glace",
     "de": "Obstsalat mit Eis",
     "hr": "Voćna salata sa sladoledom",
@@ -2279,9 +2692,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "水果沙拉配冰淇淋",
     "es": "Ensalada de frutas con helado",
     "it": "Macedonia con gelato",
-    "tr": "Dondurmalı meyve salatası"
+    "tr": "Dondurmalı meyve salatası",
+    "he": "סלט פירות עם גלידה"
   },
   "Fruit salad": {
+
     "fr": "Salade de fruits",
     "de": "Obstsalat",
     "hr": "Voćna salata",
@@ -2290,9 +2705,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "水果沙拉",
     "es": "Ensalada de frutas",
     "it": "Macedonia",
-    "tr": "Meyve salatası"
+    "tr": "Meyve salatası",
+    "he": "סלט פירות"
   },
   "Octopus": {
+
     "fr": "Poulpe",
     "de": "Oktopus",
     "hr": "Hobotnica",
@@ -2301,9 +2718,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "章鱼",
     "es": "Pulpo",
     "it": "Polpo",
-    "tr": "Ahtapot"
+    "tr": "Ahtapot",
+    "he": "תמנון"
   },
   "Guest information": {
+
     "fr": "Informations pour les clients",
     "de": "Gästeinformationen",
     "hr": "Informacije za goste",
@@ -2312,9 +2731,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "客人须知",
     "es": "Información para huéspedes",
     "it": "Informazioni per gli ospiti",
-    "tr": "Misafir bilgileri"
+    "tr": "Misafir bilgileri",
+    "he": "מידע לאורחים"
   },
   "All prices are quoted in Euro (€) and include VAT.": {
+
     "fr": "Tous les prix sont en euros (€) et incluent la TVA.",
     "de": "Alle Preise sind in Euro (€) und inkl. MwSt.",
     "hr": "Sve cijene su u eurima (€) i uključuju PDV.",
@@ -2323,9 +2744,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "所有价格以欧元（€）标示并含增值税。",
     "es": "Todos los precios están en euros (€) e incluyen IVA.",
     "it": "Tutti i prezzi sono in euro (€) e includono IVA.",
-    "tr": "Tüm fiyatlar Euro (€) cinsinden ve KDV dahildir."
+    "tr": "Tüm fiyatlar Euro (€) cinsinden ve KDV dahildir.",
+    "he": "כל המחירים ביורו (€) וכוללים מע״מ."
   },
   "Your minibar is inspected and replenished daily by our hotel staff. Any item consumed will automatically be charged to your room account.": {
+
     "fr": "Le minibar est contrôlé et réapprovisionné chaque jour par le personnel. Tout article consommé sera facturé sur votre compte de chambre.",
     "de": "Die Minibar wird täglich vom Hotelpersonal geprüft und aufgefüllt. Verzehrte Artikel werden automatisch auf Ihr Zimmerkonto gebucht.",
     "hr": "Minibar se svakodnevno pregledava i nadopunjuje. Svaki potrošeni artikl automatski se naplaćuje na račun sobe.",
@@ -2334,9 +2757,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "迷你吧每日由酒店员工检查并补充。任何已消费商品将自动计入客房账单。",
     "es": "El minibar se revisa y repone a diario. Cualquier artículo consumido se cargará automáticamente a la cuenta de la habitación.",
     "it": "Il minibar viene controllato e rifornito ogni giorno. Ogni articolo consumato verrà addebitato automaticamente sul conto della camera.",
-    "tr": "Minibar her gün personel tarafından kontrol edilir ve doldurulur. Tüketilen her ürün oda hesabınıza otomatik işlenir."
+    "tr": "Minibar her gün personel tarafından kontrol edilir ve doldurulur. Tüketilen her ürün oda hesabınıza otomatik işlenir.",
+    "he": "המיניבר נבדק וממולא מדי יום על ידי צוות המלון. כל פריט שנצרך יחויב אוטומטית לחשבון החדר שלכם."
   },
   "To place an order or request assistance, contact Reception by dialing 100 from your room phone or via Viber / WhatsApp: +383 48 808 408.": {
+
     "fr": "Pour commander ou demander de l’aide, contactez la réception au 100 depuis le téléphone de la chambre ou via Viber / WhatsApp : +383 48 808 408.",
     "de": "Für Bestellungen oder Hilfe erreichen Sie die Rezeption unter 100 vom Zimmtelefon oder via Viber / WhatsApp: +383 48 808 408.",
     "hr": "Za narudžbu ili pomoć kontaktirajte recepciju na 100 s sobnog telefona ili putem Vibera / WhatsAppa: +383 48 808 408.",
@@ -2345,9 +2770,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "如需点餐或协助，请用客房电话拨打 100，或通过 Viber / WhatsApp：+383 48 808 408 联系前台。",
     "es": "Para pedir o solicitar ayuda, contacta con recepción marcando 100 desde el teléfono de la habitación o por Viber / WhatsApp: +383 48 808 408.",
     "it": "Per ordinare o richiedere assistenza, contatta la reception al 100 dal telefono di camera o via Viber / WhatsApp: +383 48 808 408.",
-    "tr": "Sipariş veya yardım için oda telefonundan 100’ü arayın ya da Viber / WhatsApp: +383 48 808 408."
+    "tr": "Sipariş veya yardım için oda telefonundan 100’ü arayın ya da Viber / WhatsApp: +383 48 808 408.",
+    "he": "להזמנה או לסיוע, פנו לקבלה בחייג 100 מטלפון החדר או דרך Viber / WhatsApp: +383 48 808 408."
   },
   "Please inform our staff of any food allergies or special dietary requirements.": {
+
     "fr": "Veuillez informer le personnel de toute allergie alimentaire ou régime particulier.",
     "de": "Bitte informieren Sie unser Personal über Allergien oder besondere Ernährungsbedürfnisse.",
     "hr": "Obavijestite osoblje o alergijama na hranu ili posebnim prehrambenim zahtjevima.",
@@ -2356,9 +2783,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "如有食物过敏或特殊饮食需求，请告知工作人员。",
     "es": "Informe al personal de cualquier alergia alimentaria o requisito dietético especial.",
     "it": "Informi il personale di eventuali allergie alimentari o esigenze dietetiche speciali.",
-    "tr": "Gıda alerjiniz veya özel diyet gereksinimleriniz varsa lütfen personele bildirin."
+    "tr": "Gıda alerjiniz veya özel diyet gereksinimleriniz varsa lütfen personele bildirin.",
+    "he": "נא לעדכן את הצוות על כל אלרגיה למזון או דרישה תזונתית מיוחדת."
   },
   "Service hours: 07:30 – 22:30 · Daily": {
+
     "fr": "Horaires : 07:30 – 22:30 · Tous les jours",
     "de": "Servicezeiten: 07:30 – 22:30 · Täglich",
     "hr": "Radno vrijeme: 07:30 – 22:30 · Svaki dan",
@@ -2367,9 +2796,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "服务时间：07:30 – 22:30 · 每日",
     "es": "Horario: 07:30 – 22:30 · Diario",
     "it": "Orari: 07:30 – 22:30 · Ogni giorno",
-    "tr": "Servis saatleri: 07:30 – 22:30 · Her gün"
+    "tr": "Servis saatleri: 07:30 – 22:30 · Her gün",
+    "he": "שעות שירות: 07:30 – 22:30 · כל יום"
   },
   "Served 07:30 – 11:00": {
+
     "fr": "Servi 07:30 – 11:00",
     "de": "Serviert 07:30 – 11:00",
     "hr": "Poslužuje se 07:30 – 11:00",
@@ -2378,9 +2809,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "供应 07:30 – 11:00",
     "es": "Servido 07:30 – 11:00",
     "it": "Servito 07:30 – 11:00",
-    "tr": "Servis 07:30 – 11:00"
+    "tr": "Servis 07:30 – 11:00",
+    "he": "מוגש 07:30 – 11:00"
   },
   "Served 11:00 – 22:30": {
+
     "fr": "Servi 11:00 – 22:30",
     "de": "Serviert 11:00 – 22:30",
     "hr": "Poslužuje se 11:00 – 22:30",
@@ -2389,9 +2822,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "供应 11:00 – 22:30",
     "es": "Servido 11:00 – 22:30",
     "it": "Servito 11:00 – 22:30",
-    "tr": "Servis 11:00 – 22:30"
+    "tr": "Servis 11:00 – 22:30",
+    "he": "מוגש 11:00 – 22:30"
   },
   "Lakeside Breakfast": {
+
     "fr": "Petit-déjeuner Lakeside",
     "de": "Lakeside Frühstück",
     "hr": "Lakeside doručak",
@@ -2400,9 +2835,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "Lakeside 早餐",
     "es": "Desayuno Lakeside",
     "it": "Colazione Lakeside",
-    "tr": "Lakeside kahvaltı"
+    "tr": "Lakeside kahvaltı",
+    "he": "ארוחת בוקר Lakeside"
   },
   "Two eggs cooked to your preference, served with sausages, ham, tomatoes, cucumbers, cheese, juice or coffee.": {
+
     "fr": "Deux œufs à votre goût, avec saucisses, jambon, tomates, concombres, fromage, jus ou café.",
     "de": "Zwei Eier nach Wunsch, mit Würstchen, Schinken, Tomaten, Gurken, Käse, Saft oder Kaffee.",
     "hr": "Dva jaja po želji, uz kobasice, šunku, rajčice, krastavce, sir, sok ili kavu.",
@@ -2411,9 +2848,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "两枚按您喜好烹制的鸡蛋，配香肠、火腿、番茄、黄瓜、奶酪、果汁或咖啡。",
     "es": "Dos huevos a tu gusto, con salchichas, jamón, tomates, pepinos, queso, zumo o café.",
     "it": "Due uova a piacere, con salsicce, prosciutto, pomodori, cetrioli, formaggio, succo o caffè.",
-    "tr": "İsteğe göre pişmiş iki yumurta; sosis, jambon, domates, salatalık, peynir, meyve suyu veya kahve ile."
+    "tr": "İsteğe göre pişmiş iki yumurta; sosis, jambon, domates, salatalık, peynir, meyve suyu veya kahve ile.",
+    "he": "שתי ביצים לפי בחירתכם, מוגשות עם נקניקיות, חזיר, עגבניות, מלפפונים, גבינה, מיץ או קפה."
   },
   "Fresh Fruit Platter": {
+
     "fr": "Plateau de fruits frais",
     "de": "Frische Obstplatte",
     "hr": "Tanjur svježeg voća",
@@ -2422,9 +2861,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "新鲜水果拼盘",
     "es": "Plato de frutas frescas",
     "it": "Piatto di frutta fresca",
-    "tr": "Taze meyve tabağı"
+    "tr": "Taze meyve tabağı",
+    "he": "מגש פירות טריים"
   },
   "Selection of seasonal fresh fruits.": {
+
     "fr": "Sélection de fruits frais de saison.",
     "de": "Auswahl saisonaler frischer Früchte.",
     "hr": "Izbor sezonskog svježeg voća.",
@@ -2433,9 +2874,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "精选当季新鲜水果。",
     "es": "Selección de frutas frescas de temporada.",
     "it": "Selezione di frutta fresca di stagione.",
-    "tr": "Mevsimlik taze meyve seçkisi."
+    "tr": "Mevsimlik taze meyve seçkisi.",
+    "he": "מבחר פירות טריים עונתיים."
   },
   "Homemade Soup": {
+
     "fr": "Soupe maison",
     "de": "Hausgemachte Suppe",
     "hr": "Domaća juha",
@@ -2444,9 +2887,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "家常汤",
     "es": "Sopa casera",
     "it": "Zuppa fatta in casa",
-    "tr": "Ev yapımı çorba"
+    "tr": "Ev yapımı çorba",
+    "he": "מרק ביתי"
   },
   "Mixed Salad": {
+
     "fr": "Salade mixte",
     "de": "Gemischter Salat",
     "hr": "Miješana salata",
@@ -2455,9 +2900,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "混合沙拉",
     "es": "Ensalada mixta",
     "it": "Insalata mista",
-    "tr": "Karışık salata"
+    "tr": "Karışık salata",
+    "he": "סלט מעורב"
   },
   "Caesar Salad": {
+
     "fr": "Salade César",
     "de": "Caesar-Salat",
     "hr": "Cezar salata",
@@ -2466,9 +2913,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "凯撒沙拉",
     "es": "Ensalada César",
     "it": "Insalata Caesar",
-    "tr": "Sezar salata"
+    "tr": "Sezar salata",
+    "he": "סלט קיסר"
   },
   "Greek Salad": {
+
     "fr": "Salade grecque",
     "de": "Griechischer Salat",
     "hr": "Grčka salata",
@@ -2477,9 +2926,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "希腊沙拉",
     "es": "Ensalada griega",
     "it": "Insalata greca",
-    "tr": "Yunan salatası"
+    "tr": "Yunan salatası",
+    "he": "סלט יווני"
   },
   "Rocket Salad": {
+
     "fr": "Salade de roquette",
     "de": "Rucolasalat",
     "hr": "Rukola salata",
@@ -2488,9 +2939,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "芝麻菜沙拉",
     "es": "Ensalada de rúcula",
     "it": "Insalata di rucola",
-    "tr": "Roka salata"
+    "tr": "Roka salata",
+    "he": "סלט רוקט"
   },
   "Mixed Cold Appetizer": {
+
     "fr": "Assortiment d’entrées froides",
     "de": "Gemischte kalte Vorspeise",
     "hr": "Miješano hladno predjelo",
@@ -2499,9 +2952,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "混合冷前菜",
     "es": "Entrante frío mixto",
     "it": "Antipasto freddo misto",
-    "tr": "Karışık soğuk meze"
+    "tr": "Karışık soğuk meze",
+    "he": "מנת פתיחה קרה מעורבת"
   },
   "Cheese Selection": {
+
     "fr": "Sélection de fromages",
     "de": "Käseauswahl",
     "hr": "Izbor sireva",
@@ -2510,9 +2965,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "奶酪拼盘",
     "es": "Selección de quesos",
     "it": "Selezione di formaggi",
-    "tr": "Peynir seçkisi"
+    "tr": "Peynir seçkisi",
+    "he": "מבחר גבינות"
   },
   "Risotto Frutti di Mare": {
+
     "fr": "Risotto Frutti di Mare",
     "de": "Risotto Frutti di Mare",
     "hr": "Rižoto Frutti di Mare",
@@ -2521,9 +2978,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "海鲜烩饭",
     "es": "Risotto Frutti di Mare",
     "it": "Risotto Frutti di Mare",
-    "tr": "Frutti di Mare risotto"
+    "tr": "Frutti di Mare risotto",
+    "he": "ריזוטו פירות ים"
   },
   "Pizza Margherita": {
+
     "fr": "Pizza Margherita",
     "de": "Pizza Margherita",
     "hr": "Pizza Margherita",
@@ -2532,9 +2991,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "玛格丽特披萨",
     "es": "Pizza Margherita",
     "it": "Pizza Margherita",
-    "tr": "Margarita pizza"
+    "tr": "Margarita pizza",
+    "he": "פיצה מרגריטה"
   },
   "Ham Pizza": {
+
     "fr": "Pizza au jambon",
     "de": "Schinken-Pizza",
     "hr": "Pizza sa šunkom",
@@ -2543,9 +3004,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "火腿披萨",
     "es": "Pizza de jamón",
     "it": "Pizza al prosciutto",
-    "tr": "Jambonlu pizza"
+    "tr": "Jambonlu pizza",
+    "he": "פיצה עם חזיר"
   },
   "Shrimps": {
+
     "fr": "Crevettes",
     "de": "Garnelen",
     "hr": "Kozice",
@@ -2554,9 +3017,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "虾",
     "es": "Gambas",
     "it": "Gamberi",
-    "tr": "Karides"
+    "tr": "Karides",
+    "he": "שרימפס"
   },
   "Tuna Steak": {
+
     "fr": "Steak de thon",
     "de": "Thunfischsteak",
     "hr": "Tuna steak",
@@ -2565,9 +3030,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "金枪鱼排",
     "es": "Filete de atún",
     "it": "Bistecca di tonno",
-    "tr": "Ton steak"
+    "tr": "Ton steak",
+    "he": "סטייק טונה"
   },
   "Beef Steak": {
+
     "fr": "Steak de bœuf",
     "de": "Rindersteak",
     "hr": "Goveđi steak",
@@ -2576,9 +3043,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "牛排",
     "es": "Bistec de ternera",
     "it": "Bistecca di manzo",
-    "tr": "Biftek"
+    "tr": "Biftek",
+    "he": "סטייק בקר"
   },
   "Chicken Breast": {
+
     "fr": "Blanc de poulet",
     "de": "Hähnchenbrust",
     "hr": "Pileća prsa",
@@ -2587,9 +3056,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡胸肉",
     "es": "Pechuga de pollo",
     "it": "Petto di pollo",
-    "tr": "Tavuk göğsü"
+    "tr": "Tavuk göğsü",
+    "he": "חזה עוף"
   },
   "Mixed Meat": {
+
     "fr": "Viandes mixtes",
     "de": "Fleischmix",
     "hr": "Miješano meso",
@@ -2598,9 +3069,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "混合肉类",
     "es": "Carne mixta",
     "it": "Carne mista",
-    "tr": "Karışık et"
+    "tr": "Karışık et",
+    "he": "בשר מעורב"
   },
   "Kids Burger": {
+
     "fr": "Burger enfant",
     "de": "Kinderburger",
     "hr": "Dječji burger",
@@ -2609,9 +3082,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "儿童汉堡",
     "es": "Hamburguesa infantil",
     "it": "Burger per bambini",
-    "tr": "Çocuk burger"
+    "tr": "Çocuk burger",
+    "he": "המבורגר ילדים"
   },
   "Selection of Teas": {
+
     "fr": "Sélection de thés",
     "de": "Teeauswahl",
     "hr": "Izbor čajeva",
@@ -2620,9 +3095,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "精选茶饮",
     "es": "Selección de tés",
     "it": "Selezione di tè",
-    "tr": "Çay seçkisi"
+    "tr": "Çay seçkisi",
+    "he": "מבחר תה"
   },
   "Iced Coffee": {
+
     "fr": "Café glacé",
     "de": "Eiskaffee",
     "hr": "Ledena kava",
@@ -2631,9 +3108,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "冰咖啡",
     "es": "Café helado",
     "it": "Caffè freddo",
-    "tr": "Buzlu kahve"
+    "tr": "Buzlu kahve",
+    "he": "קפה קר"
   },
   "Still water": {
+
     "fr": "Eau plate",
     "de": "Stilles Wasser",
     "hr": "Negazirana voda",
@@ -2642,9 +3121,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "矿泉水",
     "es": "Agua sin gas",
     "it": "Acqua naturale",
-    "tr": "Sade su"
+    "tr": "Sade su",
+    "he": "מים מינרליים"
   },
   "Sparkling water": {
+
     "fr": "Eau gazeuse",
     "de": "Sprudelwasser",
     "hr": "Gazirana voda",
@@ -2653,9 +3134,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "气泡水",
     "es": "Agua con gas",
     "it": "Acqua frizzante",
-    "tr": "Soda"
+    "tr": "Soda",
+    "he": "מים מוגזים"
   },
   "Draft beer": {
+
     "fr": "Bière pression",
     "de": "Fassbier",
     "hr": "Točeno pivo",
@@ -2664,9 +3147,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "生啤",
     "es": "Cerveza de barril",
     "it": "Birra alla spina",
-    "tr": "Fıçı bira"
+    "tr": "Fıçı bira",
+    "he": "בירה מהחבית"
   },
   "Still Water Small": {
+
     "fr": "Eau plate petite",
     "de": "Stilles Wasser klein",
     "hr": "Mala negazirana voda",
@@ -2675,9 +3160,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小瓶矿泉水",
     "es": "Agua sin gas pequeña",
     "it": "Acqua naturale piccola",
-    "tr": "Küçük sade su"
+    "tr": "Küçük sade su",
+    "he": "מים מינרליים קטן"
   },
   "Still Water Large": {
+
     "fr": "Eau plate grande",
     "de": "Stilles Wasser groß",
     "hr": "Velika negazirana voda",
@@ -2686,9 +3173,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "大瓶矿泉水",
     "es": "Agua sin gas grande",
     "it": "Acqua naturale grande",
-    "tr": "Büyük sade su"
+    "tr": "Büyük sade su",
+    "he": "מים מינרליים גדול"
   },
   "Sparkling Water Small": {
+
     "fr": "Eau gazeuse petite",
     "de": "Sprudelwasser klein",
     "hr": "Mala gazirana voda",
@@ -2697,9 +3186,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "小瓶气泡水",
     "es": "Agua con gas pequeña",
     "it": "Acqua frizzante piccola",
-    "tr": "Küçük sodalı su"
+    "tr": "Küçük sodalı su",
+    "he": "מים מוגזים קטן"
   },
   "Sparkling Water Large": {
+
     "fr": "Eau gazeuse grande",
     "de": "Sprudelwasser groß",
     "hr": "Velika gazirana voda",
@@ -2708,9 +3199,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "大瓶气泡水",
     "es": "Agua con gas grande",
     "it": "Acqua frizzante grande",
-    "tr": "Büyük sodalı su"
+    "tr": "Büyük sodalı su",
+    "he": "מים מוגזים גדול"
   },
   "Orange": {
+
     "fr": "Orange",
     "de": "Orange",
     "hr": "Naranča",
@@ -2719,9 +3212,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "橙汁",
     "es": "Naranja",
     "it": "Arancia",
-    "tr": "Portakal"
+    "tr": "Portakal",
+    "he": "תפוז"
   },
   "Apple": {
+
     "fr": "Pomme",
     "de": "Apfel",
     "hr": "Jabuka",
@@ -2730,9 +3225,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "苹果",
     "es": "Manzana",
     "it": "Mela",
-    "tr": "Elma"
+    "tr": "Elma",
+    "he": "תפוח"
   },
   "Sour Cherry": {
+
     "fr": "Cerise aigre",
     "de": "Sauerkirsche",
     "hr": "Višnja",
@@ -2741,9 +3238,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "酸樱桃",
     "es": "Cereza ácida",
     "it": "Ciliegia acida",
-    "tr": "Vişne"
+    "tr": "Vişne",
+    "he": "דובדבן חמוץ"
   },
   "Peach": {
+
     "fr": "Pêche",
     "de": "Pfirsich",
     "hr": "Breskva",
@@ -2752,9 +3251,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "桃",
     "es": "Melocotón",
     "it": "Pesca",
-    "tr": "Şeftali"
+    "tr": "Şeftali",
+    "he": "אפרסק"
   },
   "Strawberry": {
+
     "fr": "Fraise",
     "de": "Erdbeere",
     "hr": "Jagoda",
@@ -2763,9 +3264,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "草莓",
     "es": "Fresa",
     "it": "Fragola",
-    "tr": "Çilek"
+    "tr": "Çilek",
+    "he": "תות"
   },
   "Fresh Juice": {
+
     "fr": "Jus frais",
     "de": "Frischsaft",
     "hr": "Svježi sok",
@@ -2774,9 +3277,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鲜榨果汁",
     "es": "Zumo fresco",
     "it": "Succo fresco",
-    "tr": "Taze meyve suyu"
+    "tr": "Taze meyve suyu",
+    "he": "מיץ טרי"
   },
   "White Wine (0.175 L)": {
+
     "fr": "Vin blanc (0.175 L)",
     "de": "Weißwein (0.175 L)",
     "hr": "Bijelo vino (0.175 L)",
@@ -2785,9 +3290,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "白葡萄酒（0.175升）",
     "es": "Vino blanco (0.175 L)",
     "it": "Vino bianco (0.175 L)",
-    "tr": "Beyaz şarap (0.175 L)"
+    "tr": "Beyaz şarap (0.175 L)",
+    "he": "יין לבן (0.175 ל׳)"
   },
   "Red Wine (0.175 L)": {
+
     "fr": "Vin rouge (0.175 L)",
     "de": "Rotwein (0.175 L)",
     "hr": "Crveno vino (0.175 L)",
@@ -2796,9 +3303,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "红葡萄酒（0.175升）",
     "es": "Vino tinto (0.175 L)",
     "it": "Vino rosso (0.175 L)",
-    "tr": "Kırmızı şarap (0.175 L)"
+    "tr": "Kırmızı şarap (0.175 L)",
+    "he": "יין אדום (0.175 ל׳)"
   },
   "Stone Castle White Wine (0.75 L)": {
+
     "fr": "Vin blanc Stone Castle (0.75 L)",
     "de": "Stone Castle Weißwein (0.75 L)",
     "hr": "Stone Castle bijelo vino (0.75 L)",
@@ -2807,9 +3316,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "Stone Castle 白葡萄酒（0.75升）",
     "es": "Vino blanco Stone Castle (0.75 L)",
     "it": "Vino bianco Stone Castle (0.75 L)",
-    "tr": "Stone Castle beyaz şarap (0.75 L)"
+    "tr": "Stone Castle beyaz şarap (0.75 L)",
+    "he": "יין לבן Stone Castle (0.75 ל׳)"
   },
   "Stone Castle Red Wine (0.75 L)": {
+
     "fr": "Vin rouge Stone Castle (0.75 L)",
     "de": "Stone Castle Rotwein (0.75 L)",
     "hr": "Stone Castle crveno vino (0.75 L)",
@@ -2818,9 +3329,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "Stone Castle 红葡萄酒（0.75升）",
     "es": "Vino tinto Stone Castle (0.75 L)",
     "it": "Vino rosso Stone Castle (0.75 L)",
-    "tr": "Stone Castle kırmızı şarap (0.75 L)"
+    "tr": "Stone Castle kırmızı şarap (0.75 L)",
+    "he": "יין אדום Stone Castle (0.75 ל׳)"
   },
   "Orange Juice (0.33 L)": {
+
     "fr": "Jus d’orange (0.33 L)",
     "de": "Orangensaft (0.33 L)",
     "hr": "Sok od naranče (0.33 L)",
@@ -2829,9 +3342,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "橙汁（0.33升）",
     "es": "Zumo de naranja (0.33 L)",
     "it": "Succo d’arancia (0.33 L)",
-    "tr": "Portakal suyu (0.33 L)"
+    "tr": "Portakal suyu (0.33 L)",
+    "he": "מיץ תפוזים (0.33 ל׳)"
   },
   "Red Wine (0.187 L)": {
+
     "fr": "Vin rouge (0.187 L)",
     "de": "Rotwein (0.187 L)",
     "hr": "Crveno vino (0.187 L)",
@@ -2840,9 +3355,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "红葡萄酒（0.187升）",
     "es": "Vino tinto (0.187 L)",
     "it": "Vino rosso (0.187 L)",
-    "tr": "Kırmızı şarap (0.187 L)"
+    "tr": "Kırmızı şarap (0.187 L)",
+    "he": "יין אדום (0.187 ל׳)"
   },
   "White Wine (0.187 L)": {
+
     "fr": "Vin blanc (0.187 L)",
     "de": "Weißwein (0.187 L)",
     "hr": "Bijelo vino (0.187 L)",
@@ -2851,9 +3368,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "白葡萄酒（0.187升）",
     "es": "Vino blanco (0.187 L)",
     "it": "Vino bianco (0.187 L)",
-    "tr": "Beyaz şarap (0.187 L)"
+    "tr": "Beyaz şarap (0.187 L)",
+    "he": "יין לבן (0.187 ל׳)"
   },
   "Classic hamburger": {
+
     "fr": "Hamburger classique",
     "de": "Klassischer Hamburger",
     "hr": "Klasični hamburger",
@@ -2862,9 +3381,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "经典汉堡",
     "es": "Hamburguesa clásica",
     "it": "Hamburger classico",
-    "tr": "Klasik hamburger"
+    "tr": "Klasik hamburger",
+    "he": "המבורגר קלאסי"
   },
   "Chicken sandwich": {
+
     "fr": "Sandwich au poulet",
     "de": "Hähnchen-Sandwich",
     "hr": "Sendvič s piletinom",
@@ -2873,9 +3394,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉三明治",
     "es": "Sándwich de pollo",
     "it": "Panino al pollo",
-    "tr": "Tavuk sandviç"
+    "tr": "Tavuk sandviç",
+    "he": "כריך עוף"
   },
   "Ham sandwich": {
+
     "fr": "Sandwich au jambon",
     "de": "Schinken-Sandwich",
     "hr": "Sendvič sa šunkom",
@@ -2884,9 +3407,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "火腿三明治",
     "es": "Sándwich de jamón",
     "it": "Panino al prosciutto",
-    "tr": "Jambonlu sandviç"
+    "tr": "Jambonlu sandviç",
+    "he": "כריך חזיר"
   },
   "Chicken burger": {
+
     "fr": "Burger au poulet",
     "de": "Hähnchenburger",
     "hr": "Pileći burger",
@@ -2895,9 +3420,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉汉堡",
     "es": "Hamburguesa de pollo",
     "it": "Burger di pollo",
-    "tr": "Tavuk burger"
+    "tr": "Tavuk burger",
+    "he": "המבורגר עוף"
   },
   "Chicken wrap": {
+
     "fr": "Wrap au poulet",
     "de": "Hähnchen-Wrap",
     "hr": "Pileći wrap",
@@ -2906,9 +3433,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "鸡肉卷",
     "es": "Wrap de pollo",
     "it": "Wrap di pollo",
-    "tr": "Tavuk wrap"
+    "tr": "Tavuk wrap",
+    "he": "ראפ עוף"
   },
   "Mixed fruit": {
+
     "fr": "Fruits mixtes",
     "de": "Gemischtes Obst",
     "hr": "Miješano voće",
@@ -2917,9 +3446,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "什锦水果",
     "es": "Fruta mixta",
     "it": "Frutta mista",
-    "tr": "Karışık meyve"
+    "tr": "Karışık meyve",
+    "he": "פירות מעורבים"
   },
   "Lakeside hamburger": {
+
     "fr": "Hamburger Lakeside",
     "de": "Lakeside-Hamburger",
     "hr": "Lakeside hamburger",
@@ -2928,9 +3459,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "Lakeside 汉堡",
     "es": "Hamburguesa Lakeside",
     "it": "Hamburger Lakeside",
-    "tr": "Lakeside hamburger"
+    "tr": "Lakeside hamburger",
+    "he": "המבורגר Lakeside"
   },
   "Cornet ice cream": {
+
     "fr": "Glace Cornet",
     "de": "Cornet-Eis",
     "hr": "Sladoled Cornet",
@@ -2939,9 +3472,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "甜筒冰淇淋",
     "es": "Helado Cornet",
     "it": "Gelato Cornet",
-    "tr": "Cornet dondurma"
+    "tr": "Cornet dondurma",
+    "he": "גלידה בגביע"
   },
   "Magnum ice cream": {
+
     "fr": "Glace Magnum",
     "de": "Magnum-Eis",
     "hr": "Sladoled Magnum",
@@ -2950,9 +3485,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "梦龙冰淇淋",
     "es": "Helado Magnum",
     "it": "Gelato Magnum",
-    "tr": "Magnum dondurma"
+    "tr": "Magnum dondurma",
+    "he": "גלידת Magnum"
   },
   "Piña Colada": {
+
     "fr": "Piña Colada",
     "de": "Piña Colada",
     "hr": "Piña Colada",
@@ -2961,9 +3498,11 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "椰林飘香",
     "es": "Piña Colada",
     "it": "Piña Colada",
-    "tr": "Piña Colada"
+    "tr": "Piña Colada",
+    "he": "פינה קולדה"
   },
   "Blueberry Lemonade": {
+
     "fr": "Limonade myrtille",
     "de": "Heidelbeer-Limonade",
     "hr": "Limunada od borovnice",
@@ -2972,6 +3511,7 @@ export const enDict: Record<string, Partial<Record<ExtraLocale, string>>> = {
     "zh": "蓝莓柠檬水",
     "es": "Limonada de arándanos",
     "it": "Limonata al mirtillo",
-    "tr": "Yaban mersinli limonata"
+    "tr": "Yaban mersinli limonata",
+    "he": "לימונדת אוכמניות"
   }
 }

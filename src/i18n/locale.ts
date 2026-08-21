@@ -5,6 +5,7 @@ export type Locale =
   | 'de'
   | 'hr'
   | 'ar'
+  | 'he'
   | 'ja'
   | 'zh'
   | 'es'
@@ -18,6 +19,7 @@ export const LOCALES: readonly Locale[] = [
   'de',
   'hr',
   'ar',
+  'he',
   'ja',
   'zh',
   'es',
@@ -32,6 +34,7 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   de: 'DE',
   hr: 'HR',
   ar: 'AR',
+  he: 'HE',
   ja: 'JA',
   zh: '中文',
   es: 'ES',
@@ -46,6 +49,7 @@ export const LOCALE_FLAGS: Record<Locale, string> = {
   de: '🇩🇪',
   hr: '🇭🇷',
   ar: '🇸🇦',
+  he: '🇮🇱',
   ja: '🇯🇵',
   zh: '🇨🇳',
   es: '🇪🇸',
@@ -60,6 +64,7 @@ export const LOCALE_HTML: Record<Locale, string> = {
   de: 'de',
   hr: 'hr',
   ar: 'ar',
+  he: 'he',
   ja: 'ja',
   zh: 'zh-Hans',
   es: 'es',
@@ -67,7 +72,7 @@ export const LOCALE_HTML: Record<Locale, string> = {
   tr: 'tr',
 }
 
-export const RTL_LOCALES: ReadonlySet<Locale> = new Set(['ar'])
+export const RTL_LOCALES: ReadonlySet<Locale> = new Set(['ar', 'he'])
 
 export type LString = { sq: string; en: string } & Partial<
   Record<Exclude<Locale, 'sq' | 'en'>, string>
